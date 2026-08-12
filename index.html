@@ -1,0 +1,322 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="UpTop Computers is your trusted technology store in Kenya for genuine laptops, desktops, computer accessories, software, and professional IT services. Shop quality products at affordable prices with expert support and reliable customer service."
+    />
+    <title>Uptop Computers | Laptops & Tech Accessories in Nairobi</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <div class="app-container">
+      <div class="top-contact-bar">
+        <a
+          class="contact-item contact-whatsapp"
+          href="https://wa.me/254115369156"
+          target="_blank"
+          rel="noopener"
+        >
+          <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+          <span>WhatsApp</span>
+        </a>
+        <a class="contact-item contact-call" href="tel:+254115369156">
+          <i class="fa-solid fa-phone" aria-hidden="true"></i>
+          <span>Call Now</span>
+        </a>
+      </div>
+
+      <header class="site-header">
+        <div class="header-main">
+          <div class="brand-logo">
+  <img src="web_images/logo.webp" alt="Uptop Logo" class="logo-img">
+  <span>UPTOP</span>
+</div>
+          <div class="search-container">
+            <input
+              type="text"
+              class="search-input"
+              placeholder="Search laptops, accessories..."
+              aria-label="Site search"
+            />
+            <i class="fa-solid fa-magnifying-glass search-icon" aria-hidden="true"></i>
+          </div>
+        </div>
+
+        <nav class="pills-nav" aria-label="Primary">
+          <a class="pill-item active" href="index.html" aria-current="page">Home</a>
+          <a class="pill-item" href="laptops.html">Laptops</a>
+          <a class="pill-item" href="accessories.html">Accessories</a>
+          <a class="pill-item" href="services.html">Services</a>
+        </nav>
+      </header>
+
+      <main>
+        <h1 class="visually-hidden">UpTop Computers — Laptops, Desktops & Accessories in Nairobi</h1>
+<section class="carousel-container" id="carousel" aria-label="Featured promotions">
+  <button class="carousel-arrow prev" id="prevBtn" aria-label="Previous slide">
+    <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
+  </button>
+
+  <div class="carousel-track" id="carouselTrack">
+    <!-- Slide 1: Laptops -->
+<div class="carousel-slide" style="background-image: linear-gradient(rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.7)), url('web_images/hero_laptops_bg.webp');">
+  <h2 class="carousel-title">Quality Laptops, Trusted Prices</h2>
+  <p class="carousel-subtitle">HP, Dell & Lenovo laptops, tested and ready to ship across Kenya.</p>
+  <a class="btn-primary" href="laptops.html">Shop Laptops</a>
+</div>
+
+    <!-- Slide 2: Accessories -->
+    <div class="carousel-slide" style="background-image: linear-gradient(rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.7)), url('web_images/hero_accessories_bg.webp');">
+      <h2 class="carousel-title">Pro Accessories</h2>
+      <p class="carousel-subtitle">Chargers, keyboards, screens and bags matched to your exact model.</p>
+      <a class="btn-primary" href="accessories.html">Explore Accessories</a>
+    </div>
+
+    <!-- Slide 3: Services -->
+    <div class="carousel-slide" style="background-image: linear-gradient(rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.7)), url('web_images/hero_services_bg.webp');">
+      <h2 class="carousel-title">Need a Repair or Upgrade?</h2>
+      <p class="carousel-subtitle">RAM, SSD upgrades, screen repair, and custom builds — book in minutes.</p>
+      <a class="btn-primary" href="services.html">See Our Services</a>
+    </div>
+  </div>
+
+  <button class="carousel-arrow next" id="nextBtn" aria-label="Next slide">
+    <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+  </button>
+
+  <div class="carousel-dots" id="carouselDots">
+    <span class="dot active" data-slide="0"></span>
+    <span class="dot" data-slide="1"></span>
+    <span class="dot" data-slide="2"></span>
+  </div>
+</section>
+
+        <section class="categories-section">
+          <div class="section-header">
+            <h3 class="section-title">Shop by Category</h3>
+            <button
+              class="view-all"
+              id="viewAllBtn"
+              type="button"
+              aria-expanded="false"
+              aria-controls="viewAllOverlay"
+            >
+              View All
+            </button>
+            <div
+              class="view-all-overlay"
+              id="viewAllOverlay"
+              role="menu"
+              aria-label="Category shortcuts"
+            >
+              <a href="laptops.html" role="menuitem">All Laptops</a>
+              <a href="accessories.html" role="menuitem">All Accessories</a>
+              <a href="services.html" role="menuitem">All Services</a>
+            </div>
+          </div>
+
+          <div class="categories-grid">
+            <a href="laptops.html" class="category-card">
+              <div class="icon-wrapper"><i class="fa-solid fa-laptop" aria-hidden="true"></i></div>
+              <span class="category-label">Laptops</span>
+            </a>
+            <a href="laptops.html" class="category-card">
+              <div class="icon-wrapper"><i class="fa-solid fa-desktop" aria-hidden="true"></i></div>
+              <span class="category-label">Desktops</span>
+            </a>
+            <a href="accessories.html" class="category-card">
+              <div class="icon-wrapper"><i class="fa-solid fa-plug" aria-hidden="true"></i></div>
+              <span class="category-label">Chargers</span>
+            </a>
+            <a href="services.html" class="category-card">
+              <div class="icon-wrapper">
+                <i class="fa-solid fa-screwdriver-wrench" aria-hidden="true"></i>
+              </div>
+              <span class="category-label">Services</span>
+            </a>
+          </div>
+        </section>
+
+        <section class="featured-section">
+          <div class="section-header">
+            <h3 class="section-title">Featured Products</h3>
+          </div>
+          <div class="featured-grid" aria-live="polite">
+            <!-- Populated from productsData.js by jss/java.js: a live sample
+                 of real laptops + accessories, never hand-typed items. -->
+          </div>
+        </section>
+
+        <section class="review-carousel-section">
+          <div class="review-carousel-header">
+            <div>
+              <p class="review-section-label">Customer Reviews</p>
+              <h3 class="review-section-title">
+                Trusted by professionals who love our tech
+              </h3>
+            </div>
+          </div>
+
+          <div class="review-carousel-shell">
+            <button class="review-arrow review-prev" aria-label="Previous review">
+              <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
+            </button>
+
+            <div class="review-carousel-track">
+              <article class="review-card active">
+                <div class="review-stars" aria-label="5 out of 5 stars">
+                  <span aria-hidden="true">★★★★★</span>
+                </div>
+                <p class="review-quote">
+                  "Uptop delivered exactly what was promised — fast service,
+                  professional support, and a laptop that matched the description."
+                </p>
+                <div class="review-footer">
+                  <div class="reviewer-copy">
+                    <span class="reviewer-name">Amina W.</span>
+                    <span class="review-product">Lenovo ThinkPad</span>
+                  </div>
+                </div>
+              </article>
+
+              <article class="review-card">
+                <div class="review-stars" aria-label="5 out of 5 stars">
+                  <span aria-hidden="true">★★★★★</span>
+                </div>
+                <p class="review-quote">
+                  "The charger and bag were the right fit on the first try, and
+                  the support team helped me set everything up over WhatsApp."
+                </p>
+                <div class="review-footer">
+                  <div class="reviewer-copy">
+                    <span class="reviewer-name">Noah K.</span>
+                    <span class="review-product">Charger & Laptop Bag</span>
+                  </div>
+                </div>
+              </article>
+
+              <article class="review-card">
+                <div class="review-stars" aria-label="5 out of 5 stars">
+                  <span aria-hidden="true">★★★★★</span>
+                </div>
+                <p class="review-quote">
+                  "My workstation feels complete now. The desktop and monitor
+                  are both stable and were easy to get delivered to my office."
+                </p>
+                <div class="review-footer">
+                  <div class="reviewer-copy">
+                    <span class="reviewer-name">Jared T.</span>
+                    <span class="review-product">HP EliteDesk Mini</span>
+                  </div>
+                </div>
+              </article>
+
+              <article class="review-card">
+                <div class="review-stars" aria-label="5 out of 5 stars">
+                  <span aria-hidden="true">★★★★★</span>
+                </div>
+                <p class="review-quote">
+                  "Excellent value and fast turnaround. The keyboard and mouse
+                  set is comfortable and looks great on my desk."
+                </p>
+                <div class="review-footer">
+                  <div class="reviewer-copy">
+                    <span class="reviewer-name">Mira L.</span>
+                    <span class="review-product">Keyboard & Mouse Set</span>
+                  </div>
+                </div>
+              </article>
+            </div>
+
+            <button class="review-arrow review-next" aria-label="Next review">
+              <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+            </button>
+          </div>
+
+          <div class="review-dots">
+            <button class="review-dot active" aria-label="Review 1"></button>
+            <button class="review-dot" aria-label="Review 2"></button>
+            <button class="review-dot" aria-label="Review 3"></button>
+            <button class="review-dot" aria-label="Review 4"></button>
+          </div>
+        </section>
+      </main>
+
+      <a
+        href="https://wa.me/254115369156?text=Hello%20Uptop%20Computers,%20I%20would%20like%20to%20place%20an%20order."
+        class="floating-whatsapp"
+        target="_blank"
+        rel="noopener"
+        aria-label="Chat with us on WhatsApp"
+      >
+        <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+      </a>
+
+    <footer class="site-footer">
+  <div class="footer-top">
+    
+    <!-- Column 1: Brand Info -->
+    <div class="footer-brand">
+      <a href="index.html" class="footer-logo">Uptop Computers</a>
+      <p class="footer-desc">
+        Your leading source for quality laptops, computer peripherals, and mobile tech accessories in Nairobi, Kenya.
+      </p>
+    </div>
+
+    <!-- Column 2: Quick Links -->
+    <div class="footer-col">
+      <h4 class="footer-title">Quick Links</h4>
+      <ul class="footer-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="laptops.html">Laptops</a></li>
+        <li><a href="accessories.html">Accessories</a></li>
+        <li><a href="services.html">Services</a></li>
+      </ul>
+    </div>
+
+    <!-- Column 3: Contact Info -->
+    <div class="footer-col">
+      <h4 class="footer-title">Contact Info</h4>
+      <div class="footer-contact-item">
+        📍 Rasu Mall, Tom Mboya Street, Nairobi CBD
+      </div>
+      <div class="footer-contact-item">
+        📞 <a href="tel:+254115369156">+254 115 369 156</a>
+      </div>
+      <div class="footer-contact-item">
+        💬 <a href="https://wa.me/254115369156" target="_blank">+254 115 369 156 (WhatsApp)</a>
+      </div>
+      <div class="footer-contact-item">
+        ✉️ <a href="mailto:sales@uptopcomputers.co.ke">sales@uptopcomputers.co.ke</a>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="sub-footer">
+    <p>&copy; 2026 Uptop Computers. All Rights Reserved.</p>
+  </div>
+</footer>
+
+      <button id="scrollTopBtn" class="scroll-top-btn" aria-label="Scroll to top">
+        <i class="fa-solid fa-chevron-up" aria-hidden="true"></i>
+      </button>
+    </div>
+
+    <script src="productsData.js"></script>
+    <script src="jss/java.js"></script>
+  </body>
+</html>

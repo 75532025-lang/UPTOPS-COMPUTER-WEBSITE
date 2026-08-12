@@ -1,0 +1,224 @@
+Company,Model,Processor Type,Generation,RAM,Storage Type,Storage Capacity,Notes,Price (KES)
+Lenovo,T480s,Intel Core i7,8th Gen,8GB,SSD*,256GB,,21000
+Lenovo,X1 Yoga X360,Intel Core i7,8th Gen,8GB,SSD*,256GB,Touchscreen,28000
+Lenovo,X1 Carbon Gen 6,Intel Core i7,8th Gen,8GB,SSD*,256GB,,25000
+Lenovo,X1 Carbon X360,Intel Core i7,7th Gen,8GB,SSD*,256GB,Touchscreen,28000
+Lenovo,X1 Carbon,Intel Core i7,7th Gen,8GB,SSD*,256GB,,19000
+Lenovo,P50,Intel Core i7,6th Gen,8GB,SSD*,256GB,4GB Dedicated Graphics,27000
+Lenovo,T450s,Intel Core i7,5th Gen,8GB,SSD*,256GB,,17000
+Lenovo,e300,Intel Celeron,4th Gen*,4GB,SSD*,128GB,Boxed/New,12000
+Lenovo,X280,Intel Core i5,8th Gen,16GB,SSD*,256GB,Boxed/New,23000
+Lenovo,Yoga L13,Intel Core i5,10th Gen,8GB,SSD*,256GB,"Boxed/New, Touchscreen, x360 Convertible",28500
+Lenovo,X13,Intel Core i7,10th Gen,16GB,SSD*,256GB,Boxed/New,33000
+Lenovo,T490s,Intel Core i5,10th Gen,8GB,SSD*,256GB,Touchscreen,29000
+Lenovo,T490s,Intel Core i7,8th Gen,16GB,SSD,512GB,,30000
+Lenovo,T460,Intel Core i5,6th Gen,8GB,SSD*,256GB,Touchscreen,19000
+Lenovo,X1 Yoga,Intel Core i7,7th Gen,16GB,SSD*,256GB,,29000
+Lenovo,X1 Yoga,Intel Core i7,8th Gen,16GB,SSD*,512GB,,35000
+Lenovo,IdeaPad 3 14,Unspecified*,11th Gen,8GB,SSD,128GB,,19000
+Lenovo,IdeaPad 3 15,Intel Core i3,11th Gen,8GB,SSD,128GB,,18000
+Lenovo,X230,Intel Core i5,3rd Gen*,4GB,HDD,320GB,,10000
+Lenovo,G560,Intel Core i5,1st Gen*,4GB,HDD,320GB,,9000
+HP,HP 250 G7,Intel Core i5,8th Gen,8GB,SSD*,256GB,,26000
+HP,HP 640 G5,Intel Core i5,8th Gen,8GB,SSD*,256GB,,20000
+HP,HP 450 G6,Intel Core i5,8th Gen,8GB,SSD*,256GB,,22000
+HP,HP 840 G3,Intel Core i5,6th Gen,8GB,SSD*,256GB,,21000
+HP,HP 840 G5/G6,Intel Core i5,8th Gen,8GB,SSD*,256GB,,25000
+HP,HP 840 G7,Intel Core i5,10th Gen,16GB,SSD*,512GB,,30000
+HP,HP 840 G8,Intel Core i5,11th Gen,16GB,SSD*,512GB,,34000
+HP,HP 840 G10,Intel Core i5,13th Gen,16GB,SSD*,512GB,,45000
+HP,HP 840 G11,Intel Core Ultra 5,Core Ultra Series 1*,16GB,SSD*,512GB,,65000
+HP,HP 840 G11,Intel Core Ultra 7,Core Ultra Series 1*,16GB,SSD*,512GB,,75000
+HP,HP 745 G5,AMD Ryzen,Ryzen 2000 series*,8GB,SSD*,256GB,,28000
+HP,HP 845 G7,AMD Ryzen,Ryzen 4000 series*,16GB,SSD*,512GB,,27000
+HP,HP 845 G8,AMD Ryzen,Ryzen 5000 series*,16GB,SSD*,512GB,Out of stock,31000
+HP,ZBook Firefly 14 G7,Intel Core i5,10th Gen,16GB,SSD*,512GB,,33000
+HP,ZBook Firefly 14 G8,Intel Core i5,11th Gen,16GB,SSD*,512GB,,37000
+HP,ZBook Firefly 14 G8,Intel Core i7,11th Gen,16GB,SSD*,512GB,,42000
+HP,ZBook Firefly 14 G9,Intel Core i7,12th Gen,16GB,SSD*,512GB,4GB Dedicated Graphics,55000
+HP,ZBook Firefly 15 G7,Intel Core i7,10th Gen,16GB,SSD*,512GB,4GB Dedicated Graphics,43000
+HP,ZBook Firefly 15 G8,Intel Core i7,11th Gen,16GB,SSD*,512GB,4GB Dedicated Graphics,55000
+HP,ZBook Firefly 16 G9,Intel Core i7,12th Gen,16GB,SSD*,512GB,4GB Dedicated Graphics,70000
+HP,645 G5,AMD Ryzen Pro,Ryzen 3000 series*,8GB,SSD*,256GB,Boxed/New,21000
+HP,840 G3,Intel Core i5,6th Gen,8GB,SSD*,256GB,,20500
+HP,830 G5/G6,Intel Core i5,8th Gen,8GB,SSD*,256GB,Boxed/New,26000
+HP,830 G7,Intel Core i7,10th Gen,16GB,SSD*,256GB,"Boxed/New, Touchscreen",38000
+HP,Dragonfly,Intel Core i5,8th Gen,16GB,SSD*,512GB,"Boxed/New, Touchscreen, x360 Convertible",45000
+HP,830 G6 x360,Intel Core i5,8th Gen,8GB,SSD*,256GB,Boxed/New,32000
+HP,830 G7 x360,Intel Core i7,10th Gen,16GB,SSD*,512GB,Boxed/New,44000
+HP,ZBook 14u G6,Intel Core i7,8th Gen,16GB,SSD*,512GB,"Boxed/New, Touchscreen, 4GB Dedicated Graphics",44000
+HP,830 G6,Intel Core i7,8th Gen,16GB,SSD*,512GB,,33000
+HP,640 G5,Intel Core i5,8th Gen,8GB,SSD*,256GB,,21500
+HP,440 G1 x360,Intel Core i7,8th Gen,8GB,SSD*,256GB,,29500
+HP,840 G8,Intel Core i5,11th Gen,16GB,SSD*,256GB,,39000
+HP,440 G6,Intel Core i5,8th Gen,8GB,SSD*,256GB,,22000
+HP,840 G6 Touch,Intel Core i5,8th Gen,8GB,SSD*,256GB,,26000
+HP,1030 G7,Intel Core i5,10th Gen,16GB,SSD*,512GB,,42000
+HP,1030 G7,Intel Core i7,10th Gen,16GB,SSD*,512GB,,47000
+HP,1030 G7,Intel Core i7,10th Gen,32GB,SSD*,512GB,,52000
+HP,1030 G8,Intel Core i7,11th Gen,32GB,SSD*,512GB,,58000
+HP,Chromebook,Intel Celeron*,N/A*,4GB*,SSD*,16GB eMMC*,,6000
+HP,HP 650,Intel Core i5,3rd Gen*,8GB,SSD,256GB,,15000
+HP,ProBook 11 G2,Unspecified*,6th Gen,4GB,HDD,500GB,,9000
+HP,240 G8,Unspecified*,10th Gen,8GB,SSD,1TB,,22000
+HP,250 G5,Intel Core i3,5th Gen,4GB,HDD,500GB,,11000
+HP,840 G4,Intel Core i7,7th Gen,8GB,SSD,256GB,,19000
+HP,2560p,Intel Core i5,2nd Gen*,4GB,HDD,320GB,,8000
+HP,Folio 9470p,Intel Core i5,3rd Gen*,8GB,HDD,500GB,,14000
+HP,840 G2,Intel Core i5,5th Gen,8GB,HDD,500GB,,15000
+HP,Insyde,Intel Atom*,Unspecified*,2GB,HDD,100GB,,5000
+HP,Avtech,Intel Celeron,8th Gen,4GB,HDD,320GB,,12000
+HP,EliteBook 2540p,Intel Core i7,1st Gen*,4GB,HDD,128GB,,7000
+Dell,Latitude 7420,Intel Core i7,11th Gen,32GB,SSD*,512GB,Touchscreen,45000
+Dell,Latitude 7490/7400,Intel Core i5,8th Gen,8GB,SSD*,256GB,,21000
+Dell,Latitude 7490/7400,Intel Core i7,8th Gen,8GB,SSD*,256GB,,24000
+Dell,Latitude 5590/5500,Intel Core i7,8th Gen,8GB,SSD*,256GB,,27000
+Dell,XPS 15”,Intel Core i5,7th Gen,8GB,SSD*,256GB,4GB Dedicated Graphics,27000
+Dell,XPS 13”,Intel Core i5,7th Gen,8GB,SSD*,256GB,,19000
+Dell,Latitude 6320,Intel Core i5,2nd Gen*,4GB,HDD,320GB,,9000
+Dell,Latitude E6430u,Intel Core i5,3rd Gen*,8GB,SSD,256GB,,14000
+Dell,Inspiron 5520,Intel Core i5,3rd Gen*,4GB,HDD,500GB,,10000
+Dell,Latitude 6320,Intel Core i5,2nd Gen*,8GB,HDD,500GB,,12000
+Acer,Spin,Intel Core i5,8th Gen,8GB,SSD*,256GB,,24000
+Acer,Aspire 5349,Intel Core i5,2nd Gen*,4GB,HDD,320GB,,9000
+NEC,NEC Laptop x360,Intel Core i5,6th Gen,4GB,SSD,128GB,,12000
+Toshiba,Toshiba Detachable,Intel Atom*,Unspecified*,4GB,HDD,500GB,Touchscreen,9000
+Sony,Sony Laptop,Intel Core i5*,Unspecified*,4GB*,SSD*,500GB*,,7000
+Samsung,Samsung Laptop,Intel Pentium,Legacy (pre-Core series)*,2GB,HDD,320GB,,5000
+HP,Zbook Firefly 14 G7,Intel Core i7,10th Gen,32GB,SSD*,512GB,"Touchscreen, 4GB Dedicated Graphics",58500
+HP,1030 G4,Intel Core i5,8th Gen,8GB,SSD*,256GB,"Touchscreen, x360 Convertible",33000
+HP,830 G8,Intel Core i7,11th Gen,16GB,SSD*,512GB,Touchscreen,44000
+HP,830 G8,Intel Core i5,11th Gen,8GB,SSD*,256GB,Touchscreen,32000
+HP,830G7,Intel Core i7,10th Gen,16GB,SSD*,512GB,Touchscreen,40000
+HP,830 G6,Intel Core i7,8th Gen,16GB,SSD*,512GB,Touchscreen,34500
+HP,830G7,Intel Core i5,10th Gen,8GB,SSD*,256GB,,27000
+HP,840 G8,Intel Core i5,11th Gen,8GB,SSD*,256GB,Touchscreen,33000
+HP,840 G6,Intel Core i7,8th Gen,16GB,SSD*,512GB,Touchscreen,34000
+HP,840 G5,Intel Core i5,8th Gen,8GB,SSD*,256GB,,24000
+HP,840 G6,Intel Core i5,8th Gen,8GB,SSD*,256GB,,24000
+HP,840 G5,Intel Core i7,7th Gen,8GB,SSD*,256GB,,25500
+HP,745 G6,AMD Ryzen 5,Ryzen 3000 series*,8GB,SSD*,256GB,2GB Dedicated Graphics,25500
+HP,840 G4,Intel Core i5,7th Gen,8GB,SSD*,256GB,,20500
+HP,840G3,Intel Core i5,6th Gen*,Unspecified*,SSD*,256GB,Touchscreen,19500
+HP,840 G3,Intel Core i5,6th Gen*,8GB,SSD*,256GB,Touchscreen,22000
+HP,840G3,Intel Core i7,6th Gen*,8GB,SSD*,256GB,,21500
+HP,830 G5,Intel Core i7,8th Gen*,16GB,SSD*,512GB,Touchscreen,35000
+HP,830 G5,Intel Core i5,8th Gen,16GB,SSD*,512GB,,30000
+HP,830G5,Intel Core i5,8th Gen,8GB,SSD*,256GB,Touchscreen,24000
+HP,830 G6,Intel Core i5,8th Gen,8GB,SSD*,256GB,,24000
+HP,820G3,Intel Core i5,6th Gen*,8GB,SSD*,256GB,,18500
+HP,11G2,Intel Core i5,6th Gen*,8GB,SSD*,256GB,,17000
+HP,640 G4,Intel Core i5,7th Gen,8GB,SSD*,256GB,,18500
+HP,640 G2,Intel Core i5,6th Gen,8GB,SSD*,256GB,,16000
+HP,840 G2,Intel Core i5,5th Gen*,8GB,SSD,256GB,,16500
+Lenovo,Yoga X390,Intel Core i5,8th Gen*,16GB,SSD*,256GB,,26000
+Lenovo,Yoga X390,Intel Core i5,8th Gen*,8GB,SSD*,256GB,,24000
+Lenovo,Yoga 370,Intel Core i5,7th Gen,8GB,SSD*,256GB,,21000
+Lenovo,Yoga 260,Intel Core i5,7th Gen*,8GB,SSD*,256GB,,19000
+Lenovo,X280,Intel Core i7,8th Gen,16GB,SSD*,256GB,Touchscreen,24000
+Lenovo,X280,Intel Core i5,8th Gen,8GB,SSD*,256GB,,19000
+Lenovo,X280,Intel Core i5,8th Gen,16GB,SSD*,256GB,,20000
+Lenovo,X280,Intel Core i3,8th Gen,8GB,SSD*,256GB,,15000
+Lenovo,Yoga 370,Intel Core i5,7th Gen*,8GB,SSD*,256GB,"Touchscreen, x360 Convertible",21000
+Lenovo,T490S,Intel Core i5,8th Gen*,8GB,SSD*,256GB,Touchscreen,22500
+Lenovo,T490S,Intel Core i5,8th Gen*,16GB,SSD*,256GB,Touchscreen,25500
+Lenovo,T480S,Intel Core i5,8th Gen,Unspecified*,SSD*,256GB,Touchscreen,21500
+Lenovo,T470S,Intel Core i7,7th Gen*,8GB,SSD*,256GB,,19000
+Lenovo,T460S,Intel Core i7,6th Gen*,8GB,SSD*,256GB,,18500
+Lenovo,T460S,Intel Core i7,6th Gen*,4GB,SSD,256GB,Touchscreen,17000
+Lenovo,T460S,Intel Core i5,6th Gen*,8GB,SSD*,256GB,,16000
+Lenovo,X270,Intel Core i5,7th Gen*,8GB,SSD*,256GB,,15000
+Lenovo,X270,Intel Core i7,7th Gen*,8GB,SSD*,256GB,,16000
+Lenovo,X270,Intel Core i5,7th Gen,8GB,SSD*,256GB,,16000
+Lenovo,X260,Intel Core i5,6th Gen*,8GB,SSD*,256GB,,15000
+Lenovo,X260,Intel Core i3,6th Gen*,8GB,SSD*,256GB,,13000
+Lenovo,Yoga 11E,Intel Core i5,8th Gen,8GB,SSD*,256GB,,19000
+Lenovo,Yoga 11E,Intel Core i5,7th Gen,8GB,SSD*,256GB,,18000
+Lenovo,Yoga 11E,Unspecified*,4th Gen*,8GB,SSD*,128GB,,12500
+Lenovo,Yoga 11E,Unspecified*,4th Gen*,4GB,SSD*,128GB,,10000
+Dell,5300,Intel Core i5,8th Gen,8GB,SSD*,256GB,"Touchscreen, x360 Convertible",22000
+Dell,5300,Intel Core i5,8th Gen,8GB,SSD*,256GB,,18500
+HP,Zbook Firefly 14 G8,Intel Core i7,11th Gen,32GB,SSD*,512GB,"Touchscreen, 4GB Dedicated Graphics",62000
+,,,,,,,,
+ MOTHERBOARDS (9 items) ,,,,,,,,
+Company,Model / Compatible With,Processor Compatibility,Price (KES),,,,,
+HP,240 G3,Core i5 4th Gen,4000,,,,,
+HP,ProBook 430 G1,Core i5 4th Gen,4000,,,,,
+HP,EliteBook 820 G2,Core i5 5th Gen,5000,,,,,
+HP,Folio 9480,Core i5 5th Gen,4500,,,,,
+HP,250 G6,Celeron,3500,,,,,
+HP,EliteBook 830 G6 x360,Core i5 8th Gen,12000,,,,,
+HP,EliteBook 840 G5,Core i5 8th Gen,13000,,,,,
+HP,Elite x2 1012 G1,Core M5,7000,,,,,
+HP,Elite x2 1013 G3,Core i5 8th Gen,12000,,,,,
+,,,,,,,,
+SCREENS  (9 items) ,,,,,,,,
+Screen Size,Resolution,Panel Type,Connector / Pins,Best For (Compatible Brands/Models),Price (KES),,,
+"11.6""",1366x768 HD,LED Slim,30-pin (eDP),"Small ultrabooks, Yoga 11E, X260/X270",3200*,,,
+"12.5""",1366x768 HD,LED Slim,30-pin (eDP),"X270, X280, X13",3500*,,,
+"13.3""",1920x1080 FHD,LED IPS,30-pin (eDP),"X1 Carbon, XPS 13, Dragonfly",4500*,,,
+"14""",1366x768 HD,LED Slim,30-pin (eDP),"T460/T470/T480 series, EliteBook 840/845",3800*,,,
+"14""",1920x1080 FHD,LED IPS,30-pin/40-pin (eDP),"T480s, T490s, EliteBook 840 G7/G8/G10",5500*,,,
+"14"" Touch",1920x1080 FHD Touch,LED Touchscreen,40-pin (eDP),"X1 Yoga, Yoga 370, EliteBook x360",8500*,,,
+"15.6""",1366x768 HD,LED Slim,30-pin/40-pin (eDP),"HP 250/450/650, Latitude 5590, Inspiron",4000*,,,
+"15.6""",1920x1080 FHD,LED IPS,30-pin/40-pin (eDP),"ZBook Firefly 15/16, XPS 15",6000*,,,
+"11.6"" Chromebook",1366x768 HD,LED Slim,30-pin (eDP),HP Chromebook,3000*,,,
+,,,,,,,,
+KEYBOARDS (7 items) ,,,,,,,,
+Type,Compatible Brand / Model,Layout,Backlit,Connector,Price (KES),,,
+Internal Laptop Keyboard,Lenovo ThinkPad T460/T470/T480 series,US QWERTY,Yes*,Ribbon (internal),2200*,,,
+Internal Laptop Keyboard,Lenovo ThinkPad X260/X270/X280,US QWERTY,Yes*,Ribbon (internal),2000*,,,
+Internal Laptop Keyboard,HP EliteBook 830/840/845 G5-G10,US QWERTY,Yes*,Ribbon (internal),2200*,,,
+Internal Laptop Keyboard,HP ProBook / 250-650 series,US QWERTY,No*,Ribbon (internal),1800*,,,
+Internal Laptop Keyboard,Dell Latitude 5000/7000 series,US QWERTY,Yes*,Ribbon (internal),2200*,,,
+External USB Keyboard,Universal (any laptop/desktop),US QWERTY,No,USB-A Wired,900*,,,
+External Wireless Keyboard,Universal (any laptop/desktop),US QWERTY,No,2.4GHz Wireless / Bluetooth,1800*,,,
+,,,,,,,,
+ MOUSE & MOUSE PADS (7 items) ,,,,,,,,
+Item,Type,Connectivity,Size / DPI,Best For,Price (KES),,,
+Wired USB Mouse,Optical,USB-A Wired,"1000 DPI, Standard size","General office use, budget option",350*,,,
+Wireless Mouse,Optical,2.4GHz USB Dongle,"1600 DPI, Standard size","Everyday laptop use, no cable clutter",900*,,,
+Bluetooth Mouse,Optical,Bluetooth (no dongle),"1600 DPI, Compact/Travel size",Ultrabooks with limited USB ports,1500*,,,
+Ergonomic Vertical Mouse,Optical,Wireless 2.4GHz,1600 DPI,"Wrist comfort, long work hours",2200*,,,
+Gaming Mouse,"Optical, RGB",USB-A Wired,Up to 6400 DPI,"Gaming, precision work",1800*,,,
+Standard Mouse Pad,"Fabric top, rubber base",N/A,220mm x 180mm,Everyday desk use,250*,,,
+Extended Desk Mouse Pad,"Fabric, stitched edges",N/A,800mm x 300mm (keyboard + mouse),Full desk coverage,600*,,,
+,,,,,,,,
+CHARGERS & ADAPTERS (7 items) ,,,,,,,,
+Compatible Brand,Wattage,Connector Tip Type,Voltage / Output,Price (KES),,,,
+"HP (Blue/Yellow pin, e.g. EliteBook, ProBook)",65W,4.5mm x 3.0mm,19.5V,1200*,,,,
+"HP (older 7.4mm pin, e.g. 2560p, 8460p)",65W,7.4mm x 5.0mm,18.5V-19.5V,1200*,,,,
+"Lenovo ThinkPad (slim tip, e.g. T480, X270)",65W,USB-C or Slim Rectangular,20V,1300*,,,,
+"Lenovo ThinkPad (round pin, older models)",65W,7.9mm Round Pin,20V,1200*,,,,
+Dell Latitude / Inspiron,65W,4.5mm x 3.0mm,19.5V,1200*,,,,
+Universal Laptop Charger (multi-tip),90W,Interchangeable tips (8-10 pcs),15V-20V adjustable,1800*,,,,
+"USB-C Laptop Charger (Ultrabooks, X1 Carbon, Dragonfly)",65W,USB-C,20V,1600*,,,,
+,,,,,,,,
+=== DESKTOPS (7 items) ===,,,,,,,,
+Company,Model,Processor Type,Generation,RAM,Storage,Form Factor,Price (KES),
+HP,EliteDesk 800 G2 SFF,Intel Core i5,6th Gen*,8GB*,256GB SSD*,Small Form Factor (SFF),19000*,
+HP,EliteDesk 800 G3 SFF,Intel Core i5,7th Gen*,8GB*,256GB SSD*,Small Form Factor (SFF),21000*,
+HP,ProDesk 400 G4 SFF,Intel Core i5,7th Gen*,8GB*,256GB SSD*,Small Form Factor (SFF),18500*,
+Dell,OptiPlex 3070 SFF,Intel Core i5,9th Gen*,8GB*,256GB SSD*,Small Form Factor (SFF),23000*,
+Dell,OptiPlex 7050 Micro,Intel Core i5,7th Gen*,8GB*,256GB SSD*,Ultra-Small (Micro/Tiny),20000*,
+Lenovo,ThinkCentre M720 Tiny,Intel Core i5,8th Gen*,8GB*,256GB SSD*,Ultra-Small (Micro/Tiny),22000*,
+HP,EliteDesk 800 G4 Mini,Intel Core i7,8th Gen*,16GB*,512GB SSD*,Ultra-Small (Micro/Mini),32000*,
+,,,,,,,,
+=== LAPTOP BAGS (5 items) ===,,,,,,,,
+Type,Size Fit,Material,Price (KES),,,,,
+Standard Laptop Backpack,"Up to 15.6""",Water-resistant Polyester,1500*,,,,,
+Slim Laptop Sleeve,"Up to 14""",Neoprene padded,800*,,,,,
+Business Laptop Bag (shoulder),"Up to 15.6""",Leather-look PU,2000*,,,,,
+Compact Laptop Backpack,"Up to 13.3""",Water-resistant Polyester,1300*,,,,,
+Anti-theft Laptop Backpack (USB charging port),"Up to 15.6""",Water-resistant Polyester,2500*,,,,,
+,,,,,,,,
+=== CATALOGUE SUMMARY ===,,,,,,,,
+LAPTOPS,140 products,,,,,,,
+SPARE PARTS - MOTHERBOARDS,9 products,,,,,,,
+SCREENS / DISPLAYS,9 products,,,,,,,
+KEYBOARDS,7 products,,,,,,,
+MOUSE & MOUSE PADS,7 products,,,,,,,
+CHARGERS & ADAPTERS,7 products,,,,,,,
+DESKTOPS,7 products,,,,,,,
+LAPTOP BAGS,5 products,,,,,,,
+TOTAL PRODUCTS IN CATALOGUE,191,,,,,,,
