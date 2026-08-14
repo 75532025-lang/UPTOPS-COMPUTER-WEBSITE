@@ -816,24 +816,24 @@ const productsData = [
   {
     "id": 75,
     "brand": "Dell",
-    "model": "XPS 15\u201d",
-    "name": "Dell XPS 15\u201d",
+    "model": "XPS 15",
+    "name": "Dell XPS 15",
     "specs": "Intel Core i5, 7th Gen, 8GB RAM, 256GB SSD* - 4GB Dedicated Graphics",
     "price": "KES 27,000",
     "category": "laptop",
     "type": "Laptop",
-    "image": "web_images/Dell_XPS_15\u201d.webp"
+    "image": "web_images/Dell_XPS_15.webp"
   },
   {
     "id": 76,
     "brand": "Dell",
-    "model": "XPS 13\u201d",
-    "name": "Dell XPS 13\u201d",
+    "model": "XPS 13",
+    "name": "Dell XPS 13",
     "specs": "Intel Core i5, 7th Gen, 8GB RAM, 256GB SSD*",
     "price": "KES 19,000",
     "category": "laptop",
     "type": "Laptop",
-    "image": "web_images/Dell_XPS_13\u201d.webp"
+    "image": "web_images/Dell_XPS_13.webp"
   },
   {
     "id": 77,
