@@ -1750,8 +1750,8 @@ const productsData = [
   },
   {
     "id": 160,
-    "brand": "Internal Laptop Keyboard",
-    "model": "Lenovo ThinkPad X260/X270/X280",
+    "brand": "Lenovo",
+    "model": "ThinkPad X260/X270/X280",
     "name": "Internal Laptop Keyboard - Lenovo ThinkPad X260/X270/X280",
     "specs": "US QWERTY, Backlit, Ribbon (internal)",
     "price": "KES 2,000 (approx.)",

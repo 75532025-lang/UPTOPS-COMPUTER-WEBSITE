@@ -1,148 +1,244 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Buy genuine HP, Dell, and Lenovo laptops and desktops in Kenya from UpTop Computers. Affordable, quality-checked machines for students, professionals, businesses, and gamers, with WhatsApp ordering and trusted support." />
-  <title>Laptops & Desktops Catalogue | Uptop Computers</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap"
-    rel="stylesheet"
-  />
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-  />
-  <link rel="stylesheet" href="css/styles.css" />
-</head>
-<body>
-  <div class="app-container">
-    <div class="top-contact-bar">
-      <a class="contact-item contact-whatsapp" href="https://wa.me/254115369156" target="_blank" rel="noopener">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Primary SEO Meta Tags -->
+    <title>Laptops &amp; Desktops Catalogue | Uptop Computers</title>
+    <meta
+      name="description"
+      content="Buy genuine HP, Dell, and Lenovo laptops and desktops in Kenya from UpTop Computers. Affordable, quality-checked machines for students, professionals, businesses, and gamers, with WhatsApp ordering and trusted support."
+    />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Replace with your live domain URL -->
+    <link rel="canonical" href="https://uptopcomputers.co.ke/laptops.html" />
+
+    <!-- Open Graph / WhatsApp / Facebook Previews -->
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://uptopcomputers.co.ke/laptops.html"
+    />
+    <meta
+      property="og:title"
+      content="Laptops &amp; Desktops Catalogue | Uptop Computers"
+    />
+    <meta
+      property="og:description"
+      content="Buy genuine HP, Dell, and Lenovo laptops in Kenya. Quality-checked machines for students, professionals, and gamers with direct WhatsApp ordering."
+    />
+    <!-- Must be an absolute URL (https://) for WhatsApp/social apps to preview -->
+    <meta
+      property="og:image"
+      content="https://uptopcomputers.co.ke/web_images/logo.webp"
+    />
+
+    <!-- Twitter / X Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Laptops &amp; Desktops Catalogue | Uptop Computers"
+    />
+    <meta
+      name="twitter:description"
+      content="Buy genuine HP, Dell, and Lenovo laptops in Kenya. Quality-checked machines for students, professionals, and gamers."
+    />
+    <meta
+      name="twitter:image"
+      content="https://uptopcomputers.co.ke/web_images/logo.webp"
+    />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/webp" href="web_images/logo.webp" />
+
+    <!-- Fonts & External Stylesheets -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      media="print"
+      onload="this.media = 'all'"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <div class="app-container">
+      <div class="top-contact-bar">
+        <a
+          class="contact-item contact-whatsapp"
+          aria-label="Contact us on WhatsApp"
+          href="https://wa.me/254115369156"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+          <span>WhatsApp</span>
+        </a>
+        <a
+          class="contact-item contact-call"
+          href="tel:+254115369156"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <i class="fa-solid fa-phone" aria-hidden="true"></i>
+          <span>Call Now</span>
+        </a>
+      </div>
+
+      <header class="site-header">
+        <div class="header-main">
+          <div class="brand-logo">
+            <img
+              src="web_images/logo.webp"
+              alt="UpTop Computers logo and brand mark"
+              class="logo-img"
+              decoding="async"
+              width="300"
+              height="200"
+            />
+            <span>UPTOP</span>
+          </div>
+          <div class="search-container">
+            <input
+              type="text"
+              class="search-input"
+              id="searchInput"
+              placeholder="Search laptops, desktops..."
+              aria-label="Site search"
+            />
+            <i
+              class="fa-solid fa-magnifying-glass search-icon"
+              aria-hidden="true"
+            ></i>
+          </div>
+        </div>
+
+        <div class="header-toolbar">
+          <div class="filter-wrapper">
+            <label for="brandFilter">Brand:</label>
+            <select id="brandFilter" class="select-input">
+              <option value="all">All Brands</option>
+            </select>
+          </div>
+
+          <div class="sort-wrapper">
+            <label for="sortSelect">Sort By:</label>
+            <select id="sortSelect" class="select-input">
+              <option value="featured">Featured</option>
+              <option value="price-asc">Price: Low to High</option>
+              <option value="price-desc">Price: High to Low</option>
+            </select>
+          </div>
+        </div>
+
+        <nav class="pills-nav" aria-label="Primary">
+          <a class="pill-item" href="index.html">Home</a>
+          <a class="pill-item active" href="laptops.html" aria-current="page"
+            >Laptops</a
+          >
+          <a class="pill-item" href="accessories.html">Accessories</a>
+          <a class="pill-item" href="services.html">Services</a>
+        </nav>
+      </header>
+
+      <main>
+        <h1 class="visually-hidden">Laptops and Desktops Catalogue</h1>
+        <section class="products-grid" id="productsGrid" aria-live="polite">
+          <!-- Cards are rendered from productsData.js by jss/java.js -->
+        </section>
+      </main>
+
+      <a
+        aria-label="Contact us on WhatsApp"
+        href="https://wa.me/254115369156?text=Hello%20Uptop%20Computers,%20I%20would%20like%20to%20place%20an%20order."
+        class="floating-whatsapp"
+        aria-label="Chat with us on WhatsApp"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Chat with us on WhatsApp"
+      >
         <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
-        <span>WhatsApp</span>
       </a>
-      <a class="contact-item contact-call" href="tel:+254115369156">
-        <i class="fa-solid fa-phone" aria-hidden="true"></i>
-        <span>Call Now</span>
-      </a>
-    </div>
 
-    <header class="site-header">
-      <div class="header-main">
-        <div class="brand-logo">
-  <img src="web_images/logo.webp" alt="Uptop Logo" class="logo-img">
-  <span>UPTOP</span>
-</div>
-        <div class="search-container">
-          <input
-            type="text"
-            class="search-input"
-            id="searchInput"
-            placeholder="Search laptops, desktops..."
-            aria-label="Site search"
-          />
-          <i class="fa-solid fa-magnifying-glass search-icon" aria-hidden="true"></i>
+      <footer class="site-footer">
+        <div class="footer-top">
+          <!-- Column 1: Brand Info -->
+          <div class="footer-brand">
+            <a href="index.html" class="footer-logo">Uptop Computers</a>
+            <p class="footer-desc">
+              Your leading source for quality laptops, computer peripherals, and
+              mobile tech accessories in Nairobi, Kenya.
+            </p>
+          </div>
+
+          <!-- Column 2: Quick Links -->
+          <div class="footer-col">
+            <h4 class="footer-title">Quick Links</h4>
+            <ul class="footer-links">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="laptops.html">Laptops</a></li>
+              <li><a href="accessories.html">Accessories</a></li>
+              <li><a href="services.html">Services</a></li>
+            </ul>
+          </div>
+
+          <!-- Column 3: Contact Info -->
+          <div class="footer-col">
+            <h4 class="footer-title">Contact Info</h4>
+            <div class="footer-contact-item">
+              📍 Rasu Mall, Tom Mboya Street, Nairobi CBD
+            </div>
+            <div class="footer-contact-item">
+              📞
+              <a
+                href="tel:+254115369156"
+                target="_blank"
+                rel="noopener noreferrer"
+                >+254 115 369 156</a
+              >
+            </div>
+            <div class="footer-contact-item">
+              💬
+              <a
+                aria-label="Contact us on WhatsApp"
+                href="https://wa.me/254115369156"
+                target="_blank"
+                rel="noopener noreferrer"
+                >+254 115 369 156 (WhatsApp)</a
+              >
+            </div>
+            <div class="footer-contact-item">
+              ✉️
+              <a href="mailto:sales@uptopcomputers.co.ke"
+                >sales@uptopcomputers.co.ke</a
+              >
+            </div>
+          </div>
         </div>
-      </div>
 
-      <div class="header-toolbar">
-        <div class="filter-wrapper">
-          <label for="brandFilter">Brand:</label>
-          <select id="brandFilter" class="select-input">
-            <option value="all">All Brands</option>
-          </select>
+        <div class="sub-footer">
+          <p>© 2026 Uptop Computers. All Rights Reserved.</p>
         </div>
+      </footer>
 
-        <div class="sort-wrapper">
-          <label for="sortSelect">Sort By:</label>
-          <select id="sortSelect" class="select-input">
-            <option value="featured">Featured</option>
-            <option value="price-asc">Price: Low to High</option>
-            <option value="price-desc">Price: High to Low</option>
-          </select>
-        </div>
-      </div>
-
-      <nav class="pills-nav" aria-label="Primary">
-        <a class="pill-item" href="index.html">Home</a>
-        <a class="pill-item active" href="laptops.html" aria-current="page">Laptops</a>
-        <a class="pill-item" href="accessories.html">Accessories</a>
-        <a class="pill-item" href="services.html">Services</a>
-      </nav>
-    </header>
-
-    <main>
-      <h1 class="visually-hidden">Laptops and Desktops Catalogue</h1>
-      <section class="products-grid" id="productsGrid" aria-live="polite">
-        <!-- Cards are rendered from productsData.js by jss/java.js -->
-      </section>
-    </main>
-
-    <a
-      href="https://wa.me/254115369156?text=Hello%20Uptop%20Computers,%20I%20would%20like%20to%20place%20an%20order."
-      class="floating-whatsapp"
-      target="_blank"
-      rel="noopener"
-      aria-label="Chat with us on WhatsApp"
-    >
-      <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
-    </a>
-
-    <footer class="site-footer">
-  <div class="footer-top">
-    
-    <!-- Column 1: Brand Info -->
-    <div class="footer-brand">
-      <a href="index.html" class="footer-logo">Uptop Computers</a>
-      <p class="footer-desc">
-        Your leading source for quality laptops, computer peripherals, and mobile tech accessories in Nairobi, Kenya.
-      </p>
+      <button
+        id="scrollTopBtn"
+        class="scroll-top-btn"
+        aria-label="Scroll to top"
+      >
+        <i class="fa-solid fa-chevron-up" aria-hidden="true"></i>
+      </button>
     </div>
 
-    <!-- Column 2: Quick Links -->
-    <div class="footer-col">
-      <h4 class="footer-title">Quick Links</h4>
-      <ul class="footer-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="laptops.html">Laptops</a></li>
-        <li><a href="accessories.html">Accessories</a></li>
-        <li><a href="services.html">Services</a></li>
-      </ul>
-    </div>
-
-    <!-- Column 3: Contact Info -->
-    <div class="footer-col">
-      <h4 class="footer-title">Contact Info</h4>
-      <div class="footer-contact-item">
-        📍 Rasu Mall, Tom Mboya Street, Nairobi CBD
-      </div>
-      <div class="footer-contact-item">
-        📞 <a href="tel:+254115369156">+254 115 369 156</a>
-      </div>
-      <div class="footer-contact-item">
-        💬 <a href="https://wa.me/254115369156" target="_blank">+254 115 369 156 (WhatsApp)</a>
-      </div>
-      <div class="footer-contact-item">
-        ✉️ <a href="mailto:sales@uptopcomputers.co.ke">sales@uptopcomputers.co.ke</a>
-      </div>
-    </div>
-
-  </div>
-
-  <div class="sub-footer">
-    <p>&copy; 2026 Uptop Computers. All Rights Reserved.</p>
-  </div>
-</footer>
-
-    <button id="scrollTopBtn" class="scroll-top-btn" aria-label="Scroll to top">
-      <i class="fa-solid fa-chevron-up" aria-hidden="true"></i>
-    </button>
-  </div>
-
-  <script src="productsData.js"></script>
-  <script src="jss/java.js"></script>
-</body>
+    <script src="productsData.js" defer></script>
+    <script src="jss/java.js" defer></script>
+  </body>
 </html>
