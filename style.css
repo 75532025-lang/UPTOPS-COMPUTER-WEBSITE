@@ -1,0 +1,5 @@
+
+/* FORCE FOOTER & PAGE CONTAINMENT */
+html, body, .app-container { overflow-x: hidden !important; max-width: 100vw !important; }
+.site-footer, .footer-top, footer { display: flex !important; flex-direction: column !important; width: 100% !important; max-width: 100vw !important; box-sizing: border-box !important; padding-left: 1rem !important; padding-right: 1rem !important; }
+.footer-col, footer div { width: 100% !important; max-width: 100% !important; }

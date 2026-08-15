@@ -1037,13 +1037,14 @@ main,
 .review-carousel-shell {
   position: relative;
   margin-top: 16px;
-  overflow: hidden; /* Prevents overflow white space */
+  overflow: hidden;
+  padding: 0 32px;
 }
 
 .review-carousel-track {
   display: flex !important;
-  gap: 0 !important; /* Managed smoothly by slide width */
-  transition: transform 0.4s ease-in-out !important;
+  gap: 0 !important;
+  transition: transform 0.45s ease-in-out !important;
   width: 100%;
 }
 
@@ -1054,25 +1055,30 @@ main,
   background-color: var(--color-surface-alt);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
-  padding: 24px;
+  padding: 24px 24px;
   display: flex;
   flex-direction: column;
   gap: 12px;
-
-  /* Keep all slides rendered in DOM for JS offset calculation */
-  opacity: 0.3;
+  opacity: 0.9;
   visibility: visible !important;
   transition: opacity 0.3s ease;
 }
 
-/* Active slide receives full visibility */
 .review-card.active {
   opacity: 1;
 }
 
 .review-stars {
+  display: flex;
+  align-items: center;
+  gap: 6px;
   color: #f59e0b;
   letter-spacing: 2px;
+  font-size: 1rem;
+}
+
+.review-score {
+  display: none !important;
 }
 
 .review-quote {
@@ -1116,51 +1122,57 @@ main,
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  width: 36px;
-  height: 36px;
+  width: 24px;
+  height: 24px;
   border-radius: 50%;
-  background-color: var(--color-surface);
-  border: 1px solid var(--color-border);
-  color: var(--color-primary);
+  background: rgba(148, 163, 184, 0.08);
+  border: 1px solid rgba(148, 163, 184, 0.18);
+  color: rgba(255, 255, 255, 0.82);
   display: flex;
   align-items: center;
   justify-content: center;
   z-index: 3;
   cursor: pointer;
+  opacity: 0.75;
+  padding: 0;
 }
 
 .review-arrow:hover,
 .review-arrow:focus-visible {
-  background-color: var(--color-primary-soft);
+  background: rgba(148, 163, 184, 0.12);
+  opacity: 1;
 }
 
 .review-prev {
-  left: 8px;
+  left: 6px;
 }
 .review-next {
-  right: 8px;
+  right: 6px;
 }
 
 .review-dots {
   display: flex;
   justify-content: center;
-  gap: 8px;
-  margin-top: 14px;
+  gap: 4px;
+  margin-top: 4px;
 }
 
 .review-dot {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background-color: var(--color-border);
+  width: 0.5px;
+  height: 0.5px;
+  border-radius: 100%;
+  background-color: rgba(148, 163, 184, 0.5);
   border: none;
   cursor: pointer;
+  padding: 0;
+  transition:
+    transform 0.2s ease,
+    background-color 0.2s ease;
 }
 
 .review-dot.active {
   background-color: var(--color-cta);
-  width: 20px;
-  border-radius: var(--radius-pill);
+  transform: scale(0.5);
 }
 
 /* --------------------------------------------------------------------------
@@ -1173,7 +1185,14 @@ main,
   margin-top: 40px;
   border-top: 1px solid #1e293b;
   width: 100%;
+  min-height: 240px;
   box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  left: 0;
+  right: 0;
 }
 
 .footer-top {
@@ -1181,9 +1200,11 @@ main,
   grid-template-columns: 1fr;
   gap: 32px;
   margin-bottom: 32px;
+  width: 100%;
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
+  align-items: start;
 }
 
 /* Medium Screens (Tablets): 2 Columns */
@@ -1284,6 +1305,7 @@ main,
 .sub-footer {
   border-top: 1px solid #1e293b;
   padding-top: 20px;
+  width: 100%;
   max-width: 1200px;
   margin: 0 auto;
   display: flex;
@@ -1554,6 +1576,37 @@ main,
 .review-card span {
   color: #f8fafc !important;
 }
+
+/* --------------------------------------------------------------------------
+   Customer review star ratings — high-contrast accent, aligned with stats
+   Higher specificity than ".review-card span" above so the gold accent
+   always wins regardless of stylesheet order.
+   -------------------------------------------------------------------------- */
+.review-card .review-stars {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 2px;
+}
+.review-card .review-stars span {
+  color: #f5b400 !important;
+  font-size: 1.05rem;
+  letter-spacing: 3px;
+  line-height: 1;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
+}
+.review-card .review-stars .review-score {
+  color: var(--color-text) !important;
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: normal;
+  text-shadow: none;
+  background-color: rgba(245, 180, 0, 0.14);
+  border: 1px solid rgba(245, 180, 0, 0.35);
+  border-radius: var(--radius-pill);
+  padding: 2px 8px;
+}
 .brand-logo {
   display: flex;
   align-items: center;
@@ -1746,10 +1799,10 @@ a.btn {
 .btn-whatsapp,
 a[href*="wa.me"],
 a[href*="whatsapp"] {
-    background-color: #25D366 !important; /* Official WhatsApp Green */
-    color: #0d1117 !important;            /* Dark, ultra-high contrast text */
-    font-weight: 700 !important;          /* Bold text weight for crisp legibility */
-    text-decoration: none !important;
+  background-color: #25d366 !important; /* Official WhatsApp Green */
+  color: #0d1117 !important; /* Dark, ultra-high contrast text */
+  font-weight: 700 !important; /* Bold text weight for crisp legibility */
+  text-decoration: none !important;
 }
 
 /* 2. Ensure FontAwesome / SVG icons inside the button also turn dark */
@@ -1759,22 +1812,22 @@ a[href*="whatsapp"] {
 .btn-whatsapp i,
 a[href*="wa.me"] i,
 a[href*="whatsapp"] i {
-    color: #0d1117 !important;
-    fill: #0d1117 !important;
+  color: #0d1117 !important;
+  fill: #0d1117 !important;
 }
 
 /* 3. Floating WhatsApp action button (Bottom Right Corner) */
 .whatsapp-float,
 .floating-whatsapp,
 a.whatsapp-btn {
-    background-color: #25D366 !important;
-    color: #0d1117 !important;
+  background-color: #25d366 !important;
+  color: #0d1117 !important;
 }
 
 .whatsapp-float i,
 .floating-whatsapp i,
 a.whatsapp-btn i {
-    color: #0d1117 !important;
+  color: #0d1117 !important;
 }
 
 /* 4. Interactive Hover & Focus States (Maintains WCAG contrast ratio) */
@@ -1783,41 +1836,44 @@ a.whatsapp-btn i {
 .btn-whatsapp:hover,
 a[href*="wa.me"]:hover,
 a[href*="whatsapp"]:hover {
-    background-color: #1eb855 !important; /* Slightly deeper green on hover */
-    color: #000000 !important;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
+  background-color: #1eb855 !important; /* Slightly deeper green on hover */
+  color: #000000 !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
 }
 
 .order-btn:focus-visible,
 .btn-order:focus-visible,
 a[href*="wa.me"]:focus-visible {
-    outline: 3px solid #ffffff !important;
-    outline-offset: 2px !important;
+  outline: 3px solid #ffffff !important;
+  outline-offset: 2px !important;
 }
-/* Clean Horizontal Scrollable Filter Bar for Mobile */
+/* --------------------------------------------------------------------------
+   Accessories filter pills (accessories.html) — dark-theme, horizontally
+   scrollable on mobile with no visible scrollbar, emerald active pill.
+   -------------------------------------------------------------------------- */
 .filter-controls {
   display: flex;
-  gap: 8px;
+  gap: 10px;
   overflow-x: auto;
-  padding: 10px 0;
-  margin-bottom: 20px;
+  padding: 10px 0 20px 0;
   -webkit-overflow-scrolling: touch;
-  scrollbar-width: none; /* Hide scrollbar for clean UI */
+  scrollbar-width: none; /* Firefox */
 }
 
 .filter-controls::-webkit-scrollbar {
-  display: none;
+  display: none; /* Chrome/Safari/Edge */
 }
 
-/* Modern Dark-Mode Filter Chips */
+/* Inactive pill */
 .filter-btn {
-  background: #1e293b;
+  flex-shrink: 0;
+  background-color: #111a2e;
   color: #94a3b8;
-  border: 1px solid #334155;
-  padding: 8px 16px;
-  border-radius: 20px;
-  font-size: 0.85rem;
+  border: 1px solid #1e293b;
+  padding: 10px 22px;
+  border-radius: 25px;
+  font-size: 0.9rem;
   font-weight: 500;
   white-space: nowrap;
   cursor: pointer;
@@ -1825,14 +1881,68 @@ a[href*="wa.me"]:focus-visible {
 }
 
 .filter-btn:hover {
-  background: #334155;
+  background-color: #1e293b;
   color: #f8fafc;
 }
 
-/* Active Pill Style (Subtle Modern Accent) */
+.filter-btn:focus-visible {
+  outline: 2px solid #10b981;
+  outline-offset: 2px;
+}
+
+/* Active pill — vibrant emerald/teal green */
 .filter-btn.active {
-  background: #2563eb;
+  background-color: #10b981;
   color: #ffffff;
-  border-color: #3b82f6;
-  box-shadow: 0 2px 8px rgba(37, 99, 235, 0.3);
+  border-color: #10b981;
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+}
+/* Force footer to stack vertically on smaller screens */
+@media screen and (max-width: 768px) {
+  footer.site-footer,
+  .site-footer .footer-top,
+  div.footer-top {
+    display: flex !important;
+    flex-direction: column !important;
+    grid-template-columns: 1fr !important;
+    width: 100% !important;
+    max-width: 100vw !important;
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+    box-sizing: border-box !important;
+    overflow-x: hidden !important;
+  }
+
+  .footer-col,
+  .site-footer div[class*="col"] {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-bottom: 1.5rem !important;
+  }
+}
+/* Fix parent container horizontal blowout */
+html, 
+body, 
+.app-container {
+  overflow-x: hidden !important;
+  max-width: 100vw !important;
+}
+
+/* Force footer stacking */
+.site-footer,
+.footer-top,
+footer {
+  display: flex !important;
+  flex-direction: column !important;
+  width: 100% !important;
+  max-width: 100vw !important;
+  box-sizing: border-box !important;
+  padding-left: 1rem !important;
+  padding-right: 1rem !important;
+}
+
+.footer-col,
+footer div {
+  width: 100% !important;
+  max-width: 100% !important;
 }

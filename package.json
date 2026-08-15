@@ -3,10 +3,9 @@
   "version": "1.0.0",
   "description": "UpTop Computers - Laptops & Accessories in Nairobi",
   "scripts": {
-    "build": "npm run minify-css && npm run minify-js && npm run copy-assets",
-    "minify-css": "clean-css -o dist/styles.min.css css/styles.css",
-    "minify-js": "terser jss/java.js --output dist/java.min.js --compress --mangle && terser productsData.js --output dist/productsData.min.js --compress --mangle",
-    "copy-assets": "node build_production.js"
+    "generate-data": "python3 generate_js_data.py",
+    "build": "node build_production.js",
+    "prebuild": "npm run generate-data"
   },
   "devDependencies": {
     "cheerio": "^1.2.0",

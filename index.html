@@ -64,7 +64,7 @@
       media="print"
       onload="this.media = 'all'"
     />
-    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/styles.min.css" />
   </head>
   <body>
     <div class="app-container">
@@ -264,7 +264,7 @@
             <h3 class="section-title">Featured Products</h3>
           </div>
           <div class="featured-grid" aria-live="polite">
-            <!-- Populated from productsData.js by jss/java.js: a live sample
+            <!-- Populated from productsData.min.js by jss/java.min.js: a live sample
                  of real laptops + accessories, never hand-typed items. -->
           </div>
         </section>
@@ -450,8 +450,64 @@
       </button>
     </div>
 
-    <script src="productsData.js" defer></script>
-    <script src="jss/java.js" defer></script>
+    <script src="productsData.min.js" defer></script>
+    <script src="jss/java.min.js" defer></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const track = document.querySelector(".review-carousel-track");
+        const slides = Array.from(document.querySelectorAll(".review-card"));
+        const dots = Array.from(document.querySelectorAll(".review-dot"));
+        const prevBtn = document.querySelector(".review-prev");
+        const nextBtn = document.querySelector(".review-next");
+
+        if (!track || slides.length === 0) return;
+
+        let currentIndex = 0;
+        let autoPlayId = null;
+
+        function updateCarousel(index) {
+          currentIndex = (index + slides.length) % slides.length;
+          track.style.transform = `translateX(-${currentIndex * 100}%)`;
+
+          slides.forEach((slide, i) => {
+            slide.classList.toggle("active", i === currentIndex);
+          });
+
+          dots.forEach((dot, i) => {
+            const isActive = i === currentIndex;
+            dot.classList.toggle("active", isActive);
+            dot.setAttribute("aria-pressed", String(isActive));
+          });
+        }
+
+        function startAutoPlay() {
+          clearInterval(autoPlayId);
+          autoPlayId = setInterval(() => {
+            updateCarousel(currentIndex + 1);
+          }, 5000);
+        }
+
+        prevBtn?.addEventListener("click", () => {
+          updateCarousel(currentIndex - 1);
+          startAutoPlay();
+        });
+
+        nextBtn?.addEventListener("click", () => {
+          updateCarousel(currentIndex + 1);
+          startAutoPlay();
+        });
+
+        dots.forEach((dot, i) => {
+          dot.addEventListener("click", () => {
+            updateCarousel(i);
+            startAutoPlay();
+          });
+        });
+
+        updateCarousel(0);
+        startAutoPlay();
+      });
+    </script>
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",

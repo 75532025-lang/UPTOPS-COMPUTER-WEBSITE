@@ -14,7 +14,6 @@
     />
     <meta name="robots" content="index, follow" />
 
-    <!-- Replace with your live domain URL -->
     <link
       rel="canonical"
       href="https://uptopcomputers.co.ke/accessories.html"
@@ -34,7 +33,6 @@
       property="og:description"
       content="Shop genuine laptop chargers, keyboards, mice, screens, motherboards, and laptop bags in Nairobi with fast WhatsApp ordering."
     />
-    <!-- Must be an absolute URL (https://) for WhatsApp/social apps to preview -->
     <meta
       property="og:image"
       content="https://uptopcomputers.co.ke/web_images/logo.webp"
@@ -65,14 +63,13 @@
       href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
-
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
       media="print"
       onload="this.media = 'all'"
     />
-    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/styles.min.css" />
   </head>
   <body class="accessories-page">
     <div class="app-container">
@@ -151,35 +148,37 @@
             </div>
           </section>
 
+          <!-- Clean Single Filter Bar Section -->
           <section class="filter-section">
             <div
-              class="chip-container"
-              id="typeChips"
+              class="filter-controls"
               role="group"
               aria-label="Filter by accessory type"
             >
-              <!-- Chips are generated from productsData.js, hiding any type with zero items -->
+              <button class="filter-btn active" data-category="all">All</button>
+              <button class="filter-btn" data-category="motherboard">
+                Motherboard
+              </button>
+              <button class="filter-btn" data-category="screen">Screen</button>
+              <button class="filter-btn" data-category="keyboard">
+                Keyboard
+              </button>
+              <button class="filter-btn" data-category="mouse">
+                Mouse &amp; Pads
+              </button>
+              <button class="filter-btn" data-category="charger">
+                Charger
+              </button>
+              <button class="filter-btn" data-category="bag">
+                Laptop Bags
+              </button>
             </div>
           </section>
-<section class="product-section">
-  <!-- ADD THIS FILTER BAR SECTION -->
- <div class="filter-controls">
-  <button class="filter-btn active" data-category="all">All</button>
-  <button class="filter-btn" data-category="motherboard">Motherboards</button>
-  <button class="filter-btn" data-category="screen">Screens</button>
-  <button class="filter-btn" data-category="keyboard">Keyboards</button>
-  <button class="filter-btn" data-category="mouse">Mouse & Pads</button>
-  <button class="filter-btn" data-category="charger">Chargers</button>
-  <button class="filter-btn" data-category="bag">Laptop Bags</button>
-</div>
 
-  <div class="products-grid" id="productsGrid">
-    <!-- Cards are rendered from productsData.js by js -->
-  </div>
-</section>
+          <!-- Single Products Grid Section -->
           <section class="product-section">
             <div class="products-grid" id="productsGrid" aria-live="polite">
-              <!-- Cards are rendered from productsData.js by jss/java.js -->
+              <!-- Cards rendered dynamically by JS -->
             </div>
           </section>
         </div>
@@ -189,17 +188,14 @@
         aria-label="Contact us on WhatsApp"
         href="https://wa.me/254115369156?text=Hello%20Uptop%20Computers,%20I%20would%20like%20to%20place%20an%20order."
         class="floating-whatsapp"
-        aria-label="Chat with us on WhatsApp"
         target="_blank"
         rel="noopener noreferrer"
-        aria-label="Chat with us on WhatsApp"
       >
         <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
       </a>
 
       <footer class="site-footer">
         <div class="footer-top">
-          <!-- Column 1: Brand Info -->
           <div class="footer-brand">
             <a href="index.html" class="footer-logo">Uptop Computers</a>
             <p class="footer-desc">
@@ -208,7 +204,6 @@
             </p>
           </div>
 
-          <!-- Column 2: Quick Links -->
           <div class="footer-col">
             <h4 class="footer-title">Quick Links</h4>
             <ul class="footer-links">
@@ -219,7 +214,6 @@
             </ul>
           </div>
 
-          <!-- Column 3: Contact Info -->
           <div class="footer-col">
             <h4 class="footer-title">Contact Info</h4>
             <div class="footer-contact-item">
@@ -267,7 +261,7 @@
       </button>
     </div>
 
-    <script src="productsData.js" defer></script>
-    <script src="jss/java.js" defer></script>
+    <script src="productsData.min.js" defer></script>
+    <script src="jss/java.min.js" defer></script>
   </body>
 </html>

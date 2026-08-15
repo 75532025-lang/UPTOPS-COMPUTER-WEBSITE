@@ -9,7 +9,6 @@
     <meta name="description" content="Shop laptop chargers, keyboards, mice, screens, motherboards, and laptop bags at UpTop Computers, Nairobi. Genuine, compatible accessories for HP, Dell, and Lenovo laptops with WhatsApp ordering.">
     <meta name="robots" content="index, follow">
 
-    <!-- Replace with your live domain URL -->
     <link rel="canonical" href="https://uptopcomputers.co.ke/accessories.html">
 
     <!-- Open Graph / WhatsApp / Facebook Previews -->
@@ -17,7 +16,6 @@
     <meta property="og:url" content="https://uptopcomputers.co.ke/accessories.html">
     <meta property="og:title" content="Laptop Accessories &amp; Computer Parts in Nairobi | Uptop Computers">
     <meta property="og:description" content="Shop genuine laptop chargers, keyboards, mice, screens, motherboards, and laptop bags in Nairobi with fast WhatsApp ordering.">
-    <!-- Must be an absolute URL (https://) for WhatsApp/social apps to preview -->
     <meta property="og:image" content="https://uptopcomputers.co.ke/web_images/logo.webp">
 
     <!-- Twitter / X Card -->
@@ -33,7 +31,6 @@
     
     
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet">
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media = 'all'">
     <link rel="stylesheet" href="css/styles.css">
   </head>
@@ -75,37 +72,27 @@
           <section class="hero-banner">
             <div class="hero-content">
               <h1>Essential Tech Accessories</h1>
-              <p>
-                Genuine chargers, keyboards, mice, screens, motherboards, and
-                laptop bags — matched to the exact laptop models we sell.
-              </p>
+              <p>Genuine chargers, keyboards, mice, screens, motherboards, and laptop bags — matched to the exact laptop models we sell.</p>
             </div>
           </section>
 
+          <!-- Clean Single Filter Bar Section -->
           <section class="filter-section">
-            <div class="chip-container" id="typeChips" role="group" aria-label="Filter by accessory type">
-              <!-- Chips are generated from productsData.js, hiding any type with zero items -->
+            <div class="filter-controls" role="group" aria-label="Filter by accessory type">
+              <button class="filter-btn active" data-category="all">All</button>
+              <button class="filter-btn" data-category="motherboard">Motherboard</button>
+              <button class="filter-btn" data-category="screen">Screen</button>
+              <button class="filter-btn" data-category="keyboard">Keyboard</button>
+              <button class="filter-btn" data-category="mouse">Mouse &amp; Pads</button>
+              <button class="filter-btn" data-category="charger">Charger</button>
+              <button class="filter-btn" data-category="bag">Laptop Bags</button>
             </div>
           </section>
-<section class="product-section">
-  <!-- ADD THIS FILTER BAR SECTION -->
- <div class="filter-controls">
-  <button class="filter-btn active" data-category="all">All</button>
-  <button class="filter-btn" data-category="motherboard">Motherboards</button>
-  <button class="filter-btn" data-category="screen">Screens</button>
-  <button class="filter-btn" data-category="keyboard">Keyboards</button>
-  <button class="filter-btn" data-category="mouse">Mouse &amp; Pads</button>
-  <button class="filter-btn" data-category="charger">Chargers</button>
-  <button class="filter-btn" data-category="bag">Laptop Bags</button>
-</div>
 
-  <div class="products-grid" id="productsGrid">
-    <!-- Cards are rendered from productsData.js by js -->
-  </div>
-</section>
+          <!-- Single Products Grid Section -->
           <section class="product-section">
             <div class="products-grid" id="productsGrid" aria-live="polite">
-              <!-- Cards are rendered from productsData.js by jss/java.js -->
+              <!-- Cards rendered dynamically by JS -->
             </div>
           </section>
         </div>
@@ -117,16 +104,11 @@
 
       <footer class="site-footer">
         <div class="footer-top">
-          <!-- Column 1: Brand Info -->
           <div class="footer-brand">
             <a href="index.html" class="footer-logo">Uptop Computers</a>
-            <p class="footer-desc">
-              Your leading source for quality laptops, computer peripherals, and
-              mobile tech accessories in Nairobi, Kenya.
-            </p>
+            <p class="footer-desc">Your leading source for quality laptops, computer peripherals, and mobile tech accessories in Nairobi, Kenya.</p>
           </div>
 
-          <!-- Column 2: Quick Links -->
           <div class="footer-col">
             <h4 class="footer-title">Quick Links</h4>
             <ul class="footer-links">
@@ -137,24 +119,12 @@
             </ul>
           </div>
 
-          <!-- Column 3: Contact Info -->
           <div class="footer-col">
             <h4 class="footer-title">Contact Info</h4>
-            <div class="footer-contact-item">
-              📍 Rasu Mall, Tom Mboya Street, Nairobi CBD
-            </div>
-            <div class="footer-contact-item">
-              📞
-              <a href="tel:+254115369156" target="_blank" rel="noopener noreferrer">+254 115 369 156</a>
-            </div>
-            <div class="footer-contact-item">
-              💬
-              <a aria-label="Contact us on WhatsApp" href="https://wa.me/254115369156" target="_blank" rel="noopener noreferrer">+254 115 369 156 (WhatsApp)</a>
-            </div>
-            <div class="footer-contact-item">
-              ✉️
-              <a href="mailto:sales@uptopcomputers.co.ke">sales@uptopcomputers.co.ke</a>
-            </div>
+            <div class="footer-contact-item">📍 Rasu Mall, Tom Mboya Street, Nairobi CBD</div>
+            <div class="footer-contact-item">📞 <a href="tel:+254115369156" target="_blank" rel="noopener noreferrer">+254 115 369 156</a></div>
+            <div class="footer-contact-item">💬 <a aria-label="Contact us on WhatsApp" href="https://wa.me/254115369156" target="_blank" rel="noopener noreferrer">+254 115 369 156 (WhatsApp)</a></div>
+            <div class="footer-contact-item">✉️ <a href="mailto:sales@uptopcomputers.co.ke">sales@uptopcomputers.co.ke</a></div>
           </div>
         </div>
 
@@ -171,5 +141,4 @@
     <script src="productsData.js" defer=""></script>
     <script src="jss/java.js" defer=""></script>
   
-
 </body></html>

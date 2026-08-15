@@ -131,26 +131,44 @@ async function processImages() {
 }
 
 // 4. JS MINIFICATION
+// Minifies jss/java.js AND productsData.js and writes the minified output
+// straight into dist/ so Netlify always serves the exact, up-to-date
+// catalog (same data, smaller payload) instead of a stale or unminified copy.
 async function processJS() {
   console.log('⚡ Minifying JS...');
   const jsFiles = ['jss/java.js', 'productsData.js'];
 
   for (const file of jsFiles) {
     const srcPath = path.join(rootDir, file);
-    if (!fs.existsSync(srcPath)) continue;
+    if (!fs.existsSync(srcPath)) {
+      console.warn(`  ! Skipped ${file} — not found at ${srcPath}`);
+      continue;
+    }
 
     const code = fs.readFileSync(srcPath, 'utf8');
-    const minified = await Terser.minify(code, { compress: true, mangle: true });
+    const result = await Terser.minify(code, { compress: true, mangle: true });
+
+    if (result.error || !result.code) {
+      // Never ship a broken/empty bundle: fall back to an un-minified,
+      // but still current and correct, copy of the source file.
+      console.error(`  ! Terser failed on ${file}, copying un-minified instead:`, result.error);
+      const destPath = path.join(distDir, file);
+      fs.mkdirSync(path.dirname(destPath), { recursive: true });
+      fs.writeFileSync(destPath, code, 'utf8');
+      continue;
+    }
+
     const destPath = path.join(distDir, file);
     fs.mkdirSync(path.dirname(destPath), { recursive: true });
-    fs.writeFileSync(destPath, minified.code, 'utf8');
+    fs.writeFileSync(destPath, result.code, 'utf8');
+    console.log(`  ✔ ${file} -> dist/${file} (${code.length} -> ${result.code.length} bytes)`);
   }
 }
 
 async function run() {
   await processImages();
   processCSS();
-  await processJS();
+  await processJS(); // writes the fresh, minified dist/productsData.js and dist/jss/java.js
   await processHTML();
   console.log('✔ Build complete!');
 }
