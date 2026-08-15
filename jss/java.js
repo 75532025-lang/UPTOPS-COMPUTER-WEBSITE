@@ -575,3 +575,28 @@
 
   document.addEventListener('DOMContentLoaded', initSite);
 })();
+document.addEventListener('DOMContentLoaded', () => {
+  const filterButtons = document.querySelectorAll('.filter-btn');
+  const productCards = document.querySelectorAll('#productsGrid .product-card');
+
+  filterButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      // 1. Highlight Active Chip
+      filterButtons.forEach(btn => btn.classList.remove('active'));
+      button.classList.add('active');
+
+      // 2. Filter Category Items
+      const targetCategory = button.getAttribute('data-category').toLowerCase();
+
+      productCards.forEach(card => {
+        const cardCategory = (card.getAttribute('data-category') || '').toLowerCase();
+
+        if (targetCategory === 'all' || cardCategory === targetCategory) {
+          card.style.display = 'block';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    });
+  });
+});
