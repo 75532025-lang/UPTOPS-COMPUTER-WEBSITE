@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- Primary SEO Meta Tags -->
-    <title>Uptopss Computers | Laptops &amp; Tech Accessories in Nairobi</title>
+    <title>Uptop Computers | Laptops &amp; Tech Accessories in Nairobi</title>
     <meta
       name="description"
       content="UpTop Computers is your trusted technology store in Kenya for genuine laptops, desktops, computer accessories, software, and professional IT services. Shop quality products at affordable prices with expert support and reliable customer service."
@@ -454,6 +454,63 @@
     <script src="/jss/java.min.js" defer></script>
     <script>
       document.addEventListener("DOMContentLoaded", () => {
+        const heroTrack = document.querySelector("#carouselTrack");
+        const heroSlides = Array.from(
+          document.querySelectorAll(".carousel-slide"),
+        );
+        const heroDots = Array.from(
+          document.querySelectorAll(".carousel-dots .dot"),
+        );
+        const heroPrevBtn = document.getElementById("prevBtn");
+        const heroNextBtn = document.getElementById("nextBtn");
+
+        if (heroTrack && heroSlides.length > 0) {
+          let heroIndex = 0;
+          let heroAutoPlayId = null;
+
+          function updateHeroSlide(index) {
+            heroIndex = (index + heroSlides.length) % heroSlides.length;
+            heroTrack.style.transform = `translateX(-${heroIndex * 100}%)`;
+
+            heroSlides.forEach((slide, i) => {
+              slide.classList.toggle("active", i === heroIndex);
+            });
+
+            heroDots.forEach((dot, i) => {
+              const isActive = i === heroIndex;
+              dot.classList.toggle("active", isActive);
+              dot.setAttribute("aria-pressed", String(isActive));
+            });
+          }
+
+          function startHeroAutoPlay() {
+            clearInterval(heroAutoPlayId);
+            heroAutoPlayId = setInterval(() => {
+              updateHeroSlide(heroIndex + 1);
+            }, 5000);
+          }
+
+          heroPrevBtn?.addEventListener("click", () => {
+            updateHeroSlide(heroIndex - 1);
+            startHeroAutoPlay();
+          });
+
+          heroNextBtn?.addEventListener("click", () => {
+            updateHeroSlide(heroIndex + 1);
+            startHeroAutoPlay();
+          });
+
+          heroDots.forEach((dot, i) => {
+            dot.addEventListener("click", () => {
+              updateHeroSlide(i);
+              startHeroAutoPlay();
+            });
+          });
+
+          updateHeroSlide(0);
+          startHeroAutoPlay();
+        }
+
         const track = document.querySelector(".review-carousel-track");
         const slides = Array.from(document.querySelectorAll(".review-card"));
         const dots = Array.from(document.querySelectorAll(".review-dot"));
