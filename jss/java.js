@@ -1,8 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {
   const filterBtns = document.querySelectorAll(".filter-btn");
   const productsGrid = document.getElementById("productsGrid") || document.querySelector(".featured-grid");
-  const brandFilterEl = document.getElementById("brandFilter");
-  const sortSelectEl = document.getElementById("sortSelect");
+  const brandFilterEl = document.getElementById("brandFilter") || document.getElementById("brandSelect");
+  const sortFilterEl = document.getElementById("sortFilter") || document.getElementById("sortSelect");
 
   if (!productsGrid) return;
 
@@ -73,37 +73,43 @@ document.addEventListener("DOMContentLoaded", () => {
   function populateBrandOptions() {
     if (!brandFilterEl || !isLaptopsPage) return;
 
-    const brands = [...new Set(
+    const allowedBrandNames = ["HP", "Lenovo", "Dell"];
+    const uniqueBrands = [...new Set(
       getProducts()
         .filter(item => LAPTOP_PAGE_CATEGORIES.includes(getCategory(item)))
         .map(item => String(item.brand || "").trim())
         .filter(Boolean)
-    )].sort((a, b) => a.localeCompare(b));
+        .filter(brand => allowedBrandNames.includes(brand))
+    )];
 
     brandFilterEl.innerHTML = ['<option value="all">All Brands</option>']
-      .concat(brands.map(brand => `<option value="${brand}">${brand}</option>`))
+      .concat(uniqueBrands.map(brand => `<option value="${brand.toLowerCase()}">${brand}</option>`))
       .join("");
   }
 
   function applyFiltersAndRender() {
-    const products = getPageProducts();
-    const brand = brandFilterEl ? brandFilterEl.value : "all";
-    const sort = sortSelectEl ? sortSelectEl.value : "featured";
+    const products = getProducts();
+    const selectedBrand = brandFilterEl ? (brandFilterEl.value || "all").toLowerCase() : "all";
+    const selectedSort = sortFilterEl ? sortFilterEl.value : "featured";
 
     let filteredProducts = products.filter(item => {
       const cat = getCategory(item);
+      if (!LAPTOP_PAGE_CATEGORIES.includes(cat)) return false;
 
-      if (isAccessoriesPage && !ACCESSORY_CATEGORIES.includes(cat)) return false;
-      if (isLaptopsPage && !LAPTOP_PAGE_CATEGORIES.includes(cat)) return false;
-
-      if (brand !== "all" && String(item.brand || "").toLowerCase() !== brand.toLowerCase()) return false;
+      if (selectedBrand !== "all") {
+        const brand = String(item.brand || "").toLowerCase();
+        const title = String(item.name || item.title || "").toLowerCase();
+        if (brand !== selectedBrand && !title.includes(selectedBrand)) {
+          return false;
+        }
+      }
 
       return true;
     });
 
-    if (sort === "price-asc") {
+    if (selectedSort === "price-low-high") {
       filteredProducts = [...filteredProducts].sort((a, b) => getPriceNumber(a.price) - getPriceNumber(b.price));
-    } else if (sort === "price-desc") {
+    } else if (selectedSort === "price-high-low") {
       filteredProducts = [...filteredProducts].sort((a, b) => getPriceNumber(b.price) - getPriceNumber(a.price));
     }
 
@@ -117,7 +123,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const name = item.name || item.title || "";
         const desc = item.specs || item.description || "";
         const price = normalizePrice(item.price || "KES 0");
-        const tagLabel = item.type || item.category || "Accessory";
+        const tagLabel = item.type || item.category || "Laptop";
         const image = item.image || item.imageUrl || "";
         const productUrl = buildProductMessage(item);
 
@@ -141,61 +147,7 @@ document.addEventListener("DOMContentLoaded", () => {
     btn.addEventListener("click", () => {
       filterBtns.forEach(b => b.classList.remove("active"));
       btn.classList.add("active");
-      const category = btn.getAttribute("data-category");
-      const categoryButtons = document.querySelectorAll(".filter-btn");
-      categoryButtons.forEach(item => item.classList.toggle("active", item === btn));
-
-      if (!isAccessoriesPage && !isLaptopsPage) {
-        applyFiltersAndRender();
-        return;
-      }
-
-      if (brandFilterEl && isLaptopsPage) {
-        brandFilterEl.value = "all";
-      }
-
-      const currentCategory = category ? category.toLowerCase() : "all";
-      const categoryState = currentCategory === "all" ? "all" : currentCategory;
-
-      if (!categoryState || categoryState === "all") {
-        applyFiltersAndRender();
-        return;
-      }
-
-      const pageProducts = getPageProducts();
-      let displayed = pageProducts.filter(item => {
-        const cat = getCategory(item);
-        return cat === categoryState;
-      });
-
-      if (brandFilterEl && brandFilterEl.value !== "all") {
-        displayed = displayed.filter(item => String(item.brand || "").toLowerCase() === brandFilterEl.value.toLowerCase());
-      }
-
-      const sort = sortSelectEl ? sortSelectEl.value : "featured";
-      if (sort === "price-asc") displayed = [...displayed].sort((a, b) => getPriceNumber(a.price) - getPriceNumber(b.price));
-      if (sort === "price-desc") displayed = [...displayed].sort((a, b) => getPriceNumber(b.price) - getPriceNumber(a.price));
-
-      productsGrid.innerHTML = displayed.length
-        ? displayed.map(item => {
-            const name = item.name || item.title || "";
-            const desc = item.specs || item.description || "";
-            const price = normalizePrice(item.price || "KES 0");
-            const image = item.image || item.imageUrl || "";
-            return `
-              <div class="product-card" data-category="${getCategory(item)}">
-                <img src="${image}" alt="${name}" class="product-img" loading="lazy" />
-                <div class="product-details">
-                  <span class="product-tag">${String(item.type || item.category || "ACCESSORY").toUpperCase()}</span>
-                  <h3 class="product-title">${name}</h3>
-                  <p class="product-desc">${desc}</p>
-                  <div class="product-price">${price}</div>
-                  <a href="${buildProductMessage(item)}" target="_blank" rel="noopener noreferrer" class="buy-btn">Order via WhatsApp</a>
-                </div>
-              </div>
-            `;
-          }).join("")
-        : '<p class="no-products">No products match these filters right now — try clearing a filter or message us on WhatsApp for the full list.</p>';
+      applyFiltersAndRender();
     });
   });
 
@@ -203,10 +155,93 @@ document.addEventListener("DOMContentLoaded", () => {
     brandFilterEl.addEventListener("change", applyFiltersAndRender);
   }
 
-  if (sortSelectEl) {
-    sortSelectEl.addEventListener("change", applyFiltersAndRender);
+  if (sortFilterEl) {
+    sortFilterEl.addEventListener("change", applyFiltersAndRender);
   }
 
   populateBrandOptions();
+  applyFiltersAndRender();
+});
+document.addEventListener('DOMContentLoaded', () => {
+  const brandSelect = document.getElementById('brandFilter');
+  const sortSelect = document.getElementById('sortFilter');
+  const productGrid = document.querySelector('.products-grid') || document.querySelector('.grid') || document.getElementById('laptopsGrid');
+
+  if (!brandSelect || typeof productsData === 'undefined') return;
+
+  function applyFiltersAndRender() {
+    const selectedBrand = brandSelect.value.toLowerCase();
+    const selectedSort = sortSelect ? sortSelect.value : 'featured';
+
+    // 1. Get base laptops
+    const laptopProducts = productsData.filter(p => !p.category || p.category.toLowerCase() === 'laptops');
+
+    // 2. Filter by Brand (checks brand field, title, and name)
+    let filtered = laptopProducts.filter(product => {
+      if (selectedBrand === 'all') return true;
+      
+      const productBrand = String(product.brand || '').toLowerCase();
+      const productTitle = String(product.title || product.name || '').toLowerCase();
+
+      return productBrand === selectedBrand || productTitle.includes(selectedBrand);
+    });
+
+    // 3. Sort by Price
+    if (selectedSort === 'price-low-high') {
+      filtered.sort((a, b) => parsePrice(a.price) - parsePrice(b.price));
+    } else if (selectedSort === 'price-high-low') {
+      filtered.sort((a, b) => parsePrice(b.price) - parsePrice(a.price));
+    }
+
+    // 4. Render output to grid
+    renderCards(filtered, productGrid);
+  }
+
+  // Parse formatted price string "KES 35,000" into raw integer 35000
+  function parsePrice(val) {
+    if (typeof val === 'number') return val;
+    return Number(String(val || 0).replace(/[^0-9]/g, '')) || 0;
+  }
+
+  // Render cards function
+  function renderCards(items, container) {
+    if (!container) return;
+    if (items.length === 0) {
+      container.innerHTML = '<p class="no-products">No laptops found for this brand.</p>';
+      return;
+    }
+
+    container.innerHTML = items.map(item => {
+      const name = item.title || item.name || '';
+      const desc = item.specs || item.description || '';
+      const price = item.price || 'KES 0';
+      const img = item.image || item.imageUrl || '';
+      
+      // WhatsApp order URL generator
+      const waText = encodeURIComponent(`Hello! 👋\n\nI'm interested in ordering this laptop from your website.\n\nProduct: ${name}\nLink: ${window.location.href}\nSpecs: ${desc}\nPrice: ${price}\n\nPlease confirm availability and payment/delivery details. Thank you!`);
+      const waLink = `https://wa.me/254115369156?text=${waText}`;
+
+      return `
+        <div class="product-card" data-category="laptops">
+          <img src="${img}" alt="${name}" class="product-img" loading="lazy" />
+          <div class="product-details">
+            <span class="product-tag">${(item.type || 'LAPTOP').toUpperCase()}</span>
+            <h3 class="product-title">${name}</h3>
+            <p class="product-desc">${desc}</p>
+            <div class="product-price">${price}</div>
+            <a href="${waLink}" target="_blank" rel="noopener noreferrer" class="buy-btn">Order via WhatsApp</a>
+          </div>
+        </div>
+      `;
+    }).join('');
+  }
+
+  // Attach event listeners
+  brandSelect.addEventListener('change', applyFiltersAndRender);
+  if (sortSelect) {
+    sortSelect.addEventListener('change', applyFiltersAndRender);
+  }
+
+  // Run initial render on load
   applyFiltersAndRender();
 });
