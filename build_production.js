@@ -50,6 +50,11 @@ async function processHTML() {
 
     if (!$('html').attr('lang')) $('html').attr('lang', 'en');
 
+    $('script[src*="productsData.min.js"]').attr('src', (_, current) => current.includes('?') ? current : 'productsData.js?v=2');
+    $('script[src*="java.min.js"]').attr('src', (_, current) => current.includes('?') ? current : 'jss/java.js?v=2');
+    $('script[src*="productsData.js"]').not('[src*="min.js"]').attr('src', (_, current) => current.includes('?') ? current : 'productsData.js?v=2');
+    $('script[src*="java.js"]').not('[src*="min.js"]').not('[src*="java.min.js"]').attr('src', (_, current) => current.includes('?') ? current : 'jss/java.js?v=2');
+
     // Preconnect to essential font domains
     $('link[rel="preconnect"]').remove();
     $('head').prepend('<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>');

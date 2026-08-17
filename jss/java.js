@@ -14,14 +14,16 @@ document.addEventListener("DOMContentLoaded", () => {
   const ACCESSORY_CATEGORIES = ["motherboard", "screen", "keyboard", "mouse", "charger", "bag"];
   const LAPTOP_PAGE_CATEGORIES = ["laptop", "desktop"];
 
-  // Current UI state — category chips and sorting remain active; the old
-  // live-search field has been removed from the laptops/accessories pages.
   const state = {
     category: "all"
   };
 
+  function normalizeText(value) {
+    return String(value ?? "").trim();
+  }
+
   function normalizeCategory(value) {
-    const cat = (value || "").toString().trim().toLowerCase();
+    const cat = normalizeText(value).toLowerCase();
     if (!cat) return "";
     if (cat === "laptops") return "laptop";
     if (cat === "desktops") return "desktop";
@@ -29,7 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function getCategory(item) {
-    return normalizeCategory(item.category || item.type || "");
+    return normalizeCategory(item?.category || item?.type || "");
   }
 
   function normalizePrice(value) {
@@ -38,10 +40,10 @@ document.addEventListener("DOMContentLoaded", () => {
     return text || "KES 0";
   }
 
-  function getPriceNumber(value) {
-    const match = String(value).match(/\d[\d,]*/);
-    if (!match) return 0;
-    return Number(match[0].replace(/,/g, ""));
+  function getNumericPrice(value) {
+    if (value === null || value === undefined || value === "") return 0;
+    if (typeof value === "number") return value;
+    return Number(String(value).replace(/[^0-9]/g, "")) || 0;
   }
 
   function buildProductMessage(item) {
@@ -68,12 +70,23 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function getProducts() {
-    return window.productsData || (typeof productsData !== "undefined" ? productsData : []);
+    return Array.isArray(window.productsData) ? window.productsData : (typeof productsData !== "undefined" ? productsData : []);
   }
 
   function getPageProducts() {
     const products = getProducts();
     return isFeaturedHomePage ? products.slice(0, 8) : products;
+  }
+
+  function matchesBrand(item, selectedBrand) {
+    if (!selectedBrand || selectedBrand === "all") return true;
+
+    const brandText = [item?.brand, item?.title, item?.name, item?.model]
+      .filter(Boolean)
+      .map(value => String(value).toLowerCase())
+      .join(" ");
+
+    return brandText.includes(selectedBrand.toLowerCase());
   }
 
   function populateBrandOptions() {
@@ -82,22 +95,19 @@ document.addEventListener("DOMContentLoaded", () => {
     const brands = [...new Set(
       getProducts()
         .filter(item => LAPTOP_PAGE_CATEGORIES.includes(getCategory(item)))
-        .map(item => String(item.brand || "").trim())
+        .map(item => normalizeText(item.brand || item.title || item.name || item.model))
         .filter(Boolean)
-    )].sort((a, b) => a.localeCompare(b));
+    )].sort((a, b) => a.localeCompare(b, undefined, { sensitivity: "base" }));
 
     brandFilterEl.innerHTML = ['<option value="all">All Brands</option>']
-      .concat(brands.map(brand => `<option value="${brand}">${brand}</option>`))
+      .concat(brands.map(brand => `<option value="${brand.toLowerCase()}">${brand}</option>`))
       .join("");
   }
 
-  // Single source of truth for what should currently be on screen: page scope
-  // (laptop/desktop vs accessory categories) -> category chip -> brand ->
-  // live search keyword -> sort order. Every control funnels through here.
   function getFilteredSortedProducts() {
     const products = getPageProducts();
-    const brand = brandFilterEl ? brandFilterEl.value : "all";
-    const sort = sortSelectEl ? sortSelectEl.value : "featured";
+    const selectedBrand = normalizeText(brandFilterEl ? brandFilterEl.value : "all").toLowerCase();
+    const selectedSort = sortSelectEl ? sortSelectEl.value : "featured";
 
     let filtered = products.filter(item => {
       const cat = getCategory(item);
@@ -108,16 +118,15 @@ document.addEventListener("DOMContentLoaded", () => {
       }
 
       if (isLaptopsPage && !LAPTOP_PAGE_CATEGORIES.includes(cat)) return false;
-
-      if (brand !== "all" && String(item.brand || "").toLowerCase() !== brand.toLowerCase()) return false;
+      if (!matchesBrand(item, selectedBrand)) return false;
 
       return true;
     });
 
-    if (sort === "price-asc") {
-      filtered = [...filtered].sort((a, b) => getPriceNumber(a.price) - getPriceNumber(b.price));
-    } else if (sort === "price-desc") {
-      filtered = [...filtered].sort((a, b) => getPriceNumber(b.price) - getPriceNumber(a.price));
+    if (selectedSort === "price-low-high") {
+      filtered = [...filtered].sort((a, b) => getNumericPrice(a.price) - getNumericPrice(b.price));
+    } else if (selectedSort === "price-high-low") {
+      filtered = [...filtered].sort((a, b) => getNumericPrice(b.price) - getNumericPrice(a.price));
     }
 
     return filtered;
