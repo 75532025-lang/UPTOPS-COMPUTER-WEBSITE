@@ -6,7 +6,7 @@ const productsData = [
     "name": "Lenovo T480s",
     "specs": "Intel Core i7, 8th Gen, 8GB RAM, 256GB SSD*",
     "price": "KES 21,000",
-    "category": "laptops",
+    "category": "laptop",
     "type": "Laptop",
     "image": "web_images/Lenovo_T480s.webp"
   },
@@ -1053,7 +1053,7 @@ const productsData = [
     "price": "KES 24,000",
     "category": "laptop",
     "type": "Laptop",
-    "image": "web_images/HP_840_G5.webp"
+    "image": "product_images/HP_840_G5/HP 840 G5.jpg"
   },
   {
     "id": 97,
@@ -1075,7 +1075,7 @@ const productsData = [
     "price": "KES 25,500",
     "category": "laptop",
     "type": "Laptop",
-    "image": "web_images/HP_840_G5.webp"
+    "image": "product_images/HP_840_G5/HP 840 G5.jpg"
   },
   {
     "id": 99,
@@ -1614,7 +1614,7 @@ const productsData = [
     "price": "KES 13,000",
     "category": "motherboard",
     "type": "Motherboard",
-    "image": "web_images/HP_EliteBook_840_G5.webp"
+    "image": "product_images/HP_840_G5/HP 840 G5.jpg"
   },
   {
     "id": 148,
@@ -1644,7 +1644,7 @@ const productsData = [
     "model": "1366x768 HD",
     "name": "11.6 Laptop Screen (1366x768 HD)",
     "specs": "LED Slim, 30-pin (eDP) - Fits: Small ultrabooks, Yoga 11E, X260/X270",
-    "price": "KES 3,200 (approx.)",
+    "price": "KES 3,200",
     "category": "screen",
     "type": "Screen",
     "image": "web_images/11.6_1366x768_HD.webp"
@@ -2101,11 +2101,3 @@ const productsData = [
     "image": "web_images/Anti-theft_Laptop_Backpack_(USB_charging_port)_Up_to_15.6.webp"
   }
 ];
-
-if (typeof window !== "undefined") {
-  window.productsData = productsData;
-}
-
-if (typeof globalThis !== "undefined") {
-  globalThis.productsData = productsData;
-}
