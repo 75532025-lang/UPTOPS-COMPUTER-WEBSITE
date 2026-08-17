@@ -54,23 +54,19 @@
             <img src="web_images/logo.webp" alt="UpTop Computers logo and brand mark" class="logo-img" decoding="async" width="50" height="52" fetchpriority="high">
             <span>UPTOP COMPUTERS</span>
           </div>
-          <div class="search-container">
-            <input type="text" class="search-input" id="searchInput" placeholder="Search laptops, desktops..." aria-label="Site search" autocomplete="off" autocorrect="off" spellcheck="false">
-            <i class="fa-solid fa-magnifying-glass search-icon" aria-hidden="true"></i>
-          </div>
         </div>
 
         <div class="header-toolbar">
           <div class="filter-wrapper">
             <label for="brandFilter">Brand:</label>
-            <select id="brandFilter" class="select-input">
+            <select id="brandFilter" name="brand" class="select-input">
               <option value="all">All Brands</option>
             </select>
           </div>
 
           <div class="sort-wrapper">
             <label for="sortSelect">Sort By:</label>
-            <select id="sortSelect" class="select-input">
+            <select id="sortSelect" name="sort" class="select-input">
               <option value="featured">Featured</option>
               <option value="price-asc">Price: Low to High</option>
               <option value="price-desc">Price: High to Low</option>
