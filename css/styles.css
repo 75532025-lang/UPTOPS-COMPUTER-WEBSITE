@@ -288,6 +288,13 @@ main,
   margin-bottom: 12px;
 }
 
+.search-wrapper {
+  padding: 0 16px 12px;
+}
+.content-container .search-wrapper {
+  padding: 0 0 16px;
+}
+
 .search-container {
   position: relative;
   display: flex;

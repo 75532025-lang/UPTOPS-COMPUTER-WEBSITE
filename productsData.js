@@ -1614,7 +1614,7 @@ const productsData = [
     "price": "KES 13,000",
     "category": "motherboard",
     "type": "Motherboard",
-    "image": "product_images/HP_840_G5/HP 840 G5.jpg"
+    "image": "product_images/HP_EliteBook_840_G5/image.jpg"
   },
   {
     "id": 148,
@@ -1655,7 +1655,7 @@ const productsData = [
     "model": "1366x768 HD",
     "name": "12.5 Laptop Screen (1366x768 HD)",
     "specs": "LED Slim, 30-pin (eDP) - Fits: X270, X280, X13",
-    "price": "KES 3,500 (approx.)",
+    "price": "KES 3,500",
     "category": "screen",
     "type": "Screen",
     "image": "web_images/11.6_1366x768_HD.webp"
@@ -1666,7 +1666,7 @@ const productsData = [
     "model": "1920x1080 FHD",
     "name": "13.3 Laptop Screen (1920x1080 FHD)",
     "specs": "LED IPS, 30-pin (eDP) - Fits: X1 Carbon, XPS 13, Dragonfly",
-    "price": "KES 4,500 (approx.)",
+    "price": "KES 4,500",
     "category": "screen",
     "type": "Screen",
     "image": "web_images/11.6_1366x768_HD.webp"
@@ -1677,7 +1677,7 @@ const productsData = [
     "model": "1366x768 HD",
     "name": "14 Laptop Screen (1366x768 HD)",
     "specs": "LED Slim, 30-pin (eDP) - Fits: T460/T470/T480 series, EliteBook 840/845",
-    "price": "KES 3,800 (approx.)",
+    "price": "KES 3,800",
     "category": "screen",
     "type": "Screen",
     "image": "web_images/11.6_1366x768_HD.webp"
@@ -1688,7 +1688,7 @@ const productsData = [
     "model": "1920x1080 FHD",
     "name": "14 Laptop Screen (1920x1080 FHD)",
     "specs": "LED IPS, 30-pin/40-pin (eDP) - Fits: T480s, T490s, EliteBook 840 G7/G8/G10",
-    "price": "KES 5,500 (approx.)",
+    "price": "KES 5,500",
     "category": "screen",
     "type": "Screen",
     "image": "web_images/11.6_1366x768_HD.webp"
@@ -1699,7 +1699,7 @@ const productsData = [
     "model": "1920x1080 FHD Touch",
     "name": "14\" Touch Laptop Screen (1920x1080 FHD Touch)",
     "specs": "LED Touchscreen, 40-pin (eDP) - Fits: X1 Yoga, Yoga 370, EliteBook x360",
-    "price": "KES 8,500 (approx.)",
+    "price": "KES 8,500",
     "category": "screen",
     "type": "Screen",
     "image": "web_images/11.6_1366x768_HD.webp"
@@ -1710,7 +1710,7 @@ const productsData = [
     "model": "1366x768 HD",
     "name": "15.6 Laptop Screen (1366x768 HD)",
     "specs": "LED Slim, 30-pin/40-pin (eDP) - Fits: HP 250/450/650, Latitude 5590, Inspiron",
-    "price": "KES 4,000 (approx.)",
+    "price": "KES 4,000",
     "category": "screen",
     "type": "Screen",
     "image": "web_images/11.6_1366x768_HD.webp"
@@ -1721,7 +1721,7 @@ const productsData = [
     "model": "1920x1080 FHD",
     "name": "15.6 Laptop Screen (1920x1080 FHD)",
     "specs": "LED IPS, 30-pin/40-pin (eDP) - Fits: ZBook Firefly 15/16, XPS 15",
-    "price": "KES 6,000 (approx.)",
+    "price": "KES 6,000",
     "category": "screen",
     "type": "Screen",
     "image": "web_images/11.6_1366x768_HD.webp"
@@ -1732,7 +1732,7 @@ const productsData = [
     "model": "1366x768 HD",
     "name": "11.6\" Chromebook Laptop Screen (1366x768 HD)",
     "specs": "LED Slim, 30-pin (eDP) - Fits: HP Chromebook",
-    "price": "KES 3,000 (approx.)",
+    "price": "KES 3,000",
     "category": "screen",
     "type": "Screen",
     "image": "web_images/11.6_1366x768_HD.webp"
@@ -1743,7 +1743,7 @@ const productsData = [
     "model": "Lenovo ThinkPad T460/T470/T480 series",
     "name": "Internal Laptop Keyboard - Lenovo ThinkPad T460/T470/T480 series",
     "specs": "US QWERTY, Backlit, Ribbon (internal)",
-    "price": "KES 2,200 (approx.)",
+    "price": "KES 2,200",
     "category": "keyboard",
     "type": "Keyboard",
     "image": "web_images/Internal_Laptop_Keyboard_Lenovo_ThinkPad_T460_T470_T480_series.webp"
@@ -1754,7 +1754,7 @@ const productsData = [
     "model": "ThinkPad X260/X270/X280",
     "name": "Internal Laptop Keyboard - Lenovo ThinkPad X260/X270/X280",
     "specs": "US QWERTY, Backlit, Ribbon (internal)",
-    "price": "KES 2,000 (approx.)",
+    "price": "KES 2,000",
     "category": "keyboard",
     "type": "Keyboard",
     "image": "web_images/Internal_Laptop_Keyboard_Lenovo_ThinkPad_X260_X270_X280.webp"
@@ -1765,7 +1765,7 @@ const productsData = [
     "model": "HP EliteBook 830/840/845 G5-G10",
     "name": "Internal Laptop Keyboard - HP EliteBook 830/840/845 G5-G10",
     "specs": "US QWERTY, Backlit, Ribbon (internal)",
-    "price": "KES 2,200 (approx.)",
+    "price": "KES 2,200",
     "category": "keyboard",
     "type": "Keyboard",
     "image": "web_images/Internal_Laptop_Keyboard_HP_EliteBook_830_840_845_G5-G10.webp"
@@ -1776,7 +1776,7 @@ const productsData = [
     "model": "HP ProBook / 250-650 series",
     "name": "Internal Laptop Keyboard - HP ProBook / 250-650 series",
     "specs": "US QWERTY, Non-backlit, Ribbon (internal)",
-    "price": "KES 1,800 (approx.)",
+    "price": "KES 1,800",
     "category": "keyboard",
     "type": "Keyboard",
     "image": "web_images/Internal_Laptop_Keyboard_HP_ProBook___250-650_series.webp"
@@ -1787,7 +1787,7 @@ const productsData = [
     "model": "Dell Latitude 5000/7000 series",
     "name": "Internal Laptop Keyboard - Dell Latitude 5000/7000 series",
     "specs": "US QWERTY, Backlit, Ribbon (internal)",
-    "price": "KES 2,200 (approx.)",
+    "price": "KES 2,200",
     "category": "keyboard",
     "type": "Keyboard",
     "image": "web_images/Internal_Laptop_Keyboard_Dell_Latitude_5000_7000_series.webp"
@@ -1798,7 +1798,7 @@ const productsData = [
     "model": "Universal (any laptop/desktop)",
     "name": "External USB Keyboard - Universal (any laptop/desktop)",
     "specs": "US QWERTY, Non-backlit, USB-A Wired",
-    "price": "KES 900 (approx.)",
+    "price": "KES 900",
     "category": "keyboard",
     "type": "Keyboard",
     "image": "web_images/External_USB_Keyboard_Universal_(any_laptop_desktop).webp"
@@ -1809,7 +1809,7 @@ const productsData = [
     "model": "Universal (any laptop/desktop)",
     "name": "External Wireless Keyboard - Universal (any laptop/desktop)",
     "specs": "US QWERTY, Non-backlit, 2.4GHz Wireless / Bluetooth",
-    "price": "KES 1,800 (approx.)",
+    "price": "KES 1,800",
     "category": "keyboard",
     "type": "Keyboard",
     "image": "web_images/External_Wireless_Keyboard_Universal_(any_laptop_desktop).webp"
@@ -1820,7 +1820,7 @@ const productsData = [
     "model": "Optical",
     "name": "Wired USB Mouse (Optical)",
     "specs": "USB-A Wired, 1000 DPI, Standard size - General office use, budget option",
-    "price": "KES 350 (approx.)",
+    "price": "KES 350",
     "category": "mouse",
     "type": "Mouse & Pads",
     "image": "web_images/Wired_USB_Mouse_Optical.webp"
@@ -1831,7 +1831,7 @@ const productsData = [
     "model": "Optical",
     "name": "Wireless Mouse (Optical)",
     "specs": "2.4GHz USB Dongle, 1600 DPI, Standard size - Everyday laptop use, no cable clutter",
-    "price": "KES 900 (approx.)",
+    "price": "KES 900",
     "category": "mouse",
     "type": "Mouse & Pads",
     "image": "web_images/Wireless_Mouse_Optical.webp"
@@ -1842,7 +1842,7 @@ const productsData = [
     "model": "Optical",
     "name": "Bluetooth Mouse (Optical)",
     "specs": "Bluetooth (no dongle), 1600 DPI, Compact/Travel size - Ultrabooks with limited USB ports",
-    "price": "KES 1,500 (approx.)",
+    "price": "KES 1,500",
     "category": "mouse",
     "type": "Mouse & Pads",
     "image": "web_images/Bluetooth_Mouse_Optical.webp"
@@ -1853,7 +1853,7 @@ const productsData = [
     "model": "Optical",
     "name": "Ergonomic Vertical Mouse (Optical)",
     "specs": "Wireless 2.4GHz, 1600 DPI - Wrist comfort, long work hours",
-    "price": "KES 2,200 (approx.)",
+    "price": "KES 2,200",
     "category": "mouse",
     "type": "Mouse & Pads",
     "image": "web_images/Ergonomic_Vertical_Mouse_Optical.webp"
@@ -1864,7 +1864,7 @@ const productsData = [
     "model": "Optical, RGB",
     "name": "Gaming Mouse (Optical, RGB)",
     "specs": "USB-A Wired, Up to 6400 DPI - Gaming, precision work",
-    "price": "KES 1,800 (approx.)",
+    "price": "KES 1,800",
     "category": "mouse",
     "type": "Mouse & Pads",
     "image": "web_images/Gaming_Mouse_Optical,_RGB.webp"
@@ -1875,7 +1875,7 @@ const productsData = [
     "model": "Fabric top, rubber base",
     "name": "Standard Mouse Pad (Fabric top, rubber base)",
     "specs": "N/A, 220mm x 180mm - Everyday desk use",
-    "price": "KES 250 (approx.)",
+    "price": "KES 250",
     "category": "mouse",
     "type": "Mouse & Pads",
     "image": "web_images/Standard_Mouse_Pad_Fabric_top,_rubber_base.webp"
@@ -1886,7 +1886,7 @@ const productsData = [
     "model": "Fabric, stitched edges",
     "name": "Extended Desk Mouse Pad (Fabric, stitched edges)",
     "specs": "N/A, 800mm x 300mm (keyboard + mouse) - Full desk coverage",
-    "price": "KES 600 (approx.)",
+    "price": "KES 600",
     "category": "mouse",
     "type": "Mouse & Pads",
     "image": "web_images/Extended_Desk_Mouse_Pad_Fabric,_stitched_edges.webp"
@@ -1897,7 +1897,7 @@ const productsData = [
     "model": "65W",
     "name": "HP (Blue/Yellow pin, e.g. EliteBook, ProBook) 65W Charger",
     "specs": "4.5mm x 3.0mm, 19.5V",
-    "price": "KES 1,200 (approx.)",
+    "price": "KES 1,200",
     "category": "charger",
     "type": "Charger",
     "image": "web_images/HP_(Blue_Yellow_pin,_e.g._EliteBook,_ProBook)_65W.webp"
@@ -1908,7 +1908,7 @@ const productsData = [
     "model": "65W",
     "name": "HP (older 7.4mm pin, e.g. 2560p, 8460p) 65W Charger",
     "specs": "7.4mm x 5.0mm, 18.5V-19.5V",
-    "price": "KES 1,200 (approx.)",
+    "price": "KES 1,200",
     "category": "charger",
     "type": "Charger",
     "image": "web_images/HP_(older_7.4mm_pin,_e.g._2560p,_8460p)_65W.webp"
@@ -1919,7 +1919,7 @@ const productsData = [
     "model": "65W",
     "name": "Lenovo ThinkPad (slim tip, e.g. T480, X270) 65W Charger",
     "specs": "USB-C or Slim Rectangular, 20V",
-    "price": "KES 1,300 (approx.)",
+    "price": "KES 1,300",
     "category": "charger",
     "type": "Charger",
     "image": "web_images/Lenovo ThinkPad (slim tip, e.g. T480, X270) 65W Charger.webp"
@@ -1930,7 +1930,7 @@ const productsData = [
     "model": "65W",
     "name": "Lenovo ThinkPad (round pin, older models) 65W Charger",
     "specs": "7.9mm Round Pin, 20V",
-    "price": "KES 1,200 (approx.)",
+    "price": "KES 1,200",
     "category": "charger",
     "type": "Charger",
     "image": "web_images/Lenovo_ThinkPad_(round_pin,_older_models)_65W.webp"
@@ -1941,7 +1941,7 @@ const productsData = [
     "model": "65W",
     "name": "Dell Latitude / Inspiron 65W Charger",
     "specs": "4.5mm x 3.0mm, 19.5V",
-    "price": "KES 1,200 (approx.)",
+    "price": "KES 1,200",
     "category": "charger",
     "type": "Charger",
     "image": "web_images/Dell Latitude  Inspiron 65W Charger.webp"
@@ -1952,7 +1952,7 @@ const productsData = [
     "model": "90W",
     "name": "Universal Laptop Charger (multi-tip) 90W Charger",
     "specs": "Interchangeable tips (8-10 pcs), 15V-20V adjustable",
-    "price": "KES 1,800 (approx.)",
+    "price": "KES 1,800",
     "category": "charger",
     "type": "Charger",
     "image": "web_images/Universal_Laptop_Charger_(multi-tip)_90W.webp"
@@ -1963,7 +1963,7 @@ const productsData = [
     "model": "65W",
     "name": "USB-C Laptop Charger (Ultrabooks, X1 Carbon, Dragonfly) 65W Charger",
     "specs": "USB-C, 20V",
-    "price": "KES 1,600 (approx.)",
+    "price": "KES 1,600",
     "category": "charger",
     "type": "Charger",
     "image": "web_images/USB-C_Laptop_Charger_(Ultrabooks,_X1_Carbon,_Dragonfly)_65W.webp"
@@ -1974,7 +1974,7 @@ const productsData = [
     "model": "EliteDesk 800 G2 SFF",
     "name": "HP EliteDesk 800 G2 SFF",
     "specs": "Intel Core i5, 6th Gen*, 8GB* RAM, 256GB SSD* - Small Form Factor (SFF)",
-    "price": "KES 19,000 (approx.)",
+    "price": "KES 19,000",
     "category": "desktop",
     "type": "Desktop",
     "image": "web_images/HP_EliteDesk_800_G2_SFF.webp"
@@ -1985,7 +1985,7 @@ const productsData = [
     "model": "EliteDesk 800 G3 SFF",
     "name": "HP EliteDesk 800 G3 SFF",
     "specs": "Intel Core i5, 7th Gen*, 8GB* RAM, 256GB SSD* - Small Form Factor (SFF)",
-    "price": "KES 21,000 (approx.)",
+    "price": "KES 21,000",
     "category": "desktop",
     "type": "Desktop",
     "image": "web_images/HP_EliteDesk_800_G3_SFF.webp"
@@ -1996,7 +1996,7 @@ const productsData = [
     "model": "ProDesk 400 G4 SFF",
     "name": "HP ProDesk 400 G4 SFF",
     "specs": "Intel Core i5, 7th Gen*, 8GB* RAM, 256GB SSD* - Small Form Factor (SFF)",
-    "price": "KES 18,500 (approx.)",
+    "price": "KES 18,500",
     "category": "desktop",
     "type": "Desktop",
     "image": "web_images/HP_ProDesk_400_G4_SFF.webp"
@@ -2007,7 +2007,7 @@ const productsData = [
     "model": "OptiPlex 3070 SFF",
     "name": "Dell OptiPlex 3070 SFF",
     "specs": "Intel Core i5, 9th Gen*, 8GB* RAM, 256GB SSD* - Small Form Factor (SFF)",
-    "price": "KES 23,000 (approx.)",
+    "price": "KES 23,000",
     "category": "desktop",
     "type": "Desktop",
     "image": "web_images/Dell_OptiPlex_3070_SFF.webp"
@@ -2018,7 +2018,7 @@ const productsData = [
     "model": "OptiPlex 7050 Micro",
     "name": "Dell OptiPlex 7050 Micro",
     "specs": "Intel Core i5, 7th Gen*, 8GB* RAM, 256GB SSD* - Ultra-Small (Micro/Tiny)",
-    "price": "KES 20,000 (approx.)",
+    "price": "KES 20,000",
     "category": "desktop",
     "type": "Desktop",
     "image": "web_images/Dell_OptiPlex_7050_Micro.webp"
@@ -2029,7 +2029,7 @@ const productsData = [
     "model": "ThinkCentre M720 Tiny",
     "name": "Lenovo ThinkCentre M720 Tiny",
     "specs": "Intel Core i5, 8th Gen*, 8GB* RAM, 256GB SSD* - Ultra-Small (Micro/Tiny)",
-    "price": "KES 22,000 (approx.)",
+    "price": "KES 22,000",
     "category": "desktop",
     "type": "Desktop",
     "image": "web_images/Lenovo_ThinkCentre_M720_Tiny.webp"
@@ -2040,7 +2040,7 @@ const productsData = [
     "model": "EliteDesk 800 G4 Mini",
     "name": "HP EliteDesk 800 G4 Mini",
     "specs": "Intel Core i7, 8th Gen*, 16GB* RAM, 512GB SSD* - Ultra-Small (Micro/Mini)",
-    "price": "KES 32,000 (approx.)",
+    "price": "KES 32,000",
     "category": "desktop",
     "type": "Desktop",
     "image": "web_images/HP_EliteDesk_800_G4_Mini.webp"
@@ -2051,7 +2051,7 @@ const productsData = [
     "model": "Up to 15.6",
     "name": "Standard Laptop Backpack (Up to 15.6)",
     "specs": "Water-resistant Polyester",
-    "price": "KES 1,500 (approx.)",
+    "price": "KES 1,500",
     "category": "bag",
     "type": "Bag",
     "image": "web_images/Standard_Laptop_Backpack_Up_to_15.6.webp"
@@ -2062,7 +2062,7 @@ const productsData = [
     "model": "Up to 14",
     "name": "Slim Laptop Sleeve (Up to 14)",
     "specs": "Neoprene padded",
-    "price": "KES 800 (approx.)",
+    "price": "KES 800",
     "category": "bag",
     "type": "Bag",
     "image": "web_images/Slim_Laptop_Sleeve_Up_to_14.webp"
@@ -2073,7 +2073,7 @@ const productsData = [
     "model": "Up to 15.6",
     "name": "Business Laptop Bag (shoulder) (Up to 15.6)",
     "specs": "Leather-look PU",
-    "price": "KES 2,000 (approx.)",
+    "price": "KES 2,000",
     "category": "bag",
     "type": "Bag",
     "image": "web_images/Business_Laptop_Bag_(shoulder)_Up_to_15.6.webp"
@@ -2084,7 +2084,7 @@ const productsData = [
     "model": "Up to 13.3",
     "name": "Compact Laptop Backpack (Up to 13.3)",
     "specs": "Water-resistant Polyester",
-    "price": "KES 1,300 (approx.)",
+    "price": "KES 1,300",
     "category": "bag",
     "type": "Bag",
     "image": "web_images/Compact_Laptop_Backpack_Up_to_13.3.webp"
@@ -2095,7 +2095,7 @@ const productsData = [
     "model": "Up to 15.6",
     "name": "Anti-theft Laptop Backpack (USB charging port) (Up to 15.6)",
     "specs": "Water-resistant Polyester",
-    "price": "KES 2,500 (approx.)",
+    "price": "KES 2,500",
     "category": "bag",
     "type": "Bag",
     "image": "web_images/Anti-theft_Laptop_Backpack_(USB_charging_port)_Up_to_15.6.webp"

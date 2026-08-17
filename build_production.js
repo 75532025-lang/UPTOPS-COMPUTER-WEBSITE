@@ -29,7 +29,11 @@ function processCSS() {
 
   const minified = new CleanCSS({ level: 1 }).minify(css).styles;
   fs.mkdirSync(path.join(distDir, 'css'), { recursive: true });
-  fs.writeFileSync(path.join(distDir, 'css', 'styles.css'), minified, 'utf8');
+  // HTML pages link to css/styles.min.css — write the minified output there
+  // (previously this wrote to styles.css, which nothing actually links to,
+  // leaving the real styles.min.css stale after every build).
+  fs.writeFileSync(path.join(distDir, 'css', 'styles.min.css'), minified, 'utf8');
+  fs.writeFileSync(path.join(distDir, 'css', 'styles.css'), css, 'utf8');
 }
 
 // 2. PROCESS HTML (PRELOAD LCP IMAGE & ELIMINATE RENDER-BLOCKING FCP)
